@@ -45,3 +45,37 @@ body{
     height: 90vh;
 }
 /* ______________________________________ */
+/* ___________NavBar_____________________ */
+.flexNav{
+    display: flex;
+    justify-content: space-between;
+    color: turquoise;
+    background: linear-gradient(rgb(35, 44, 48),rgba(1, 42, 58,0.5));
+    height: 50px;
+}
+.flexFlexNav{
+    display: flex;
+    justify-content: space-between;
+}
+.centerV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px ;
+    transition-duration: 1s;
+}
+.centerVe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 20px ;
+    
+}
+.centerV:hover{
+    background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
+}
+
+
+

@@ -1,3 +1,8 @@
+<?php 
+
+
+
+?>
 <div class="middleCenter">
           <div class="flexLogPage">
               <div class="flexLock"><i class="fas fa-unlock fa-9x"></i></div>
@@ -8,4 +13,6 @@
           </form>
       </div>
   </div>
-  </div>
+</div>
+
+
