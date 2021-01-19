@@ -1,8 +1,7 @@
 body{
-    background-image: url(/assets/image/fond0.jpg); 
+    background-image: url(./image/fond0.jpg); 
     background-size: cover; 
-    background-repeat:no-repeat ;
-    
+    background-repeat:no-repeat ;   
 }
 
 /* ___________loginPage_________________ */
