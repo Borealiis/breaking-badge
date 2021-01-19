@@ -16,8 +16,8 @@
 
 <body>
 <!-- <?php include_once('components/router.php'); ?> -->
-<!--      <?php //include('pages\login.php'); ?>-->
-      <?php include('pages\dashboard_admin.php'); ?>
+<!--      <?php //include('pages/login.php'); ?>-->
+      <?php include('./pages/dashboard_admin.php'); ?>
 
 </body>
 </html>
