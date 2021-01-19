@@ -1,7 +1,7 @@
 body{
-    background-image: url(./image/fond0.jpg); 
+    background-image: url(./image/fond0.jpg);
     background-size: cover; 
-    background-repeat:no-repeat ;   
+    background-repeat:no-repeat ;
 }
 
 /* ___________loginPage_________________ */
@@ -44,4 +44,10 @@ body{
     justify-content: center;
     height: 90vh;
 }
+
+/* ___________adminDashboard_____________ */
+
+
+
+
 /* ______________________________________ */
