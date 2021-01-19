@@ -2,19 +2,47 @@ body{
     background-image: url(/assets/image/fond0.jpg); 
     background-size: cover; 
     background-repeat:no-repeat ;
+    
 }
 
 /* ___________loginPage_________________ */
-
+.flexLock{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.fa-unlock{
+    color: turquoise;
+}
 .flexLogPage{
     display: flex;
     flex-direction: column;
-    
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 50px;
+    border-radius: 13px;
+    height: fit-content;
+    background-color: rgba(117, 190, 218, 0.3);
+    mix-blend-mode: normal;
+    border-radius: 13px;
+    transition-duration: 2s;
+
+}
+.flexLogPage:hover{
+    background-color: rgba(117, 190, 218, 0.6);
+    /* padding: 55px; */
 }
 .sizeInput{
     width: 220px;
     height: 30px;
     border : none;
+    margin: 10px;
 }
-
+.middleCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
 /* ______________________________________ */
