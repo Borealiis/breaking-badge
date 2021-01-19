@@ -1,7 +1,7 @@
 <!--TODO: (Aurore) remplacer variables entre crochets par variables php -->
 
 <main>
-    <section class="sidebar">
+    <section class="container sidebar">
         <div class="welcome">Welcome, [USER]</div>
         <div class="sidebarBadgeInfo">
             <div class="badgeNotif">
@@ -13,14 +13,14 @@
         </div>
     </section>
 
-    <div class="userInfo">
-        <section class="userHeader">
+    <div class="dashboardInfo">
+        <section class="container userHeader">
 <!--            <img src="" alt="" class="userImage">-->
             <p>[IMAGE]</p>
             <p>USERNAME</p>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
         </section>
-        <section class="badgesAndUsers">
+        <section class="container badgesAndUsers">
             <div class="viewUsers">
                 <button class="seeAllUsers">All users</button>
                 <div class="mostRecentUsers">
@@ -41,10 +41,12 @@
                 </div>
             </div>
         </section>
+
+        <section class="container otherUsersDo">
+            <p>BADGES OTHER USERS</p>
+        </section>
     </div>
 
-    <section class="otherUsersDo">
 
-    </section>
 
 </main>

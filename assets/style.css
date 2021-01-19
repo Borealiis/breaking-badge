@@ -46,7 +46,24 @@ body{
 }
 
 /* ___________adminDashboard_____________ */
+main {
+    display: flex;
+}
+.container {
+    background-color: rgba(117, 190, 218, 0.3);
+    margin: 5px;
+    justify-content: space-between;
+}
 
+.badgesAndUsers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.viewUsers {
+
+}
 
 
 
