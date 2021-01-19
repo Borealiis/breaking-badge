@@ -1,0 +1,20 @@
+body{
+    background-image: url(/assets/image/fond0.jpg); 
+    background-size: cover; 
+    background-repeat:no-repeat ;
+}
+
+/* ___________loginPage_________________ */
+
+.flexLogPage{
+    display: flex;
+    flex-direction: column;
+    
+}
+.sizeInput{
+    width: 220px;
+    height: 30px;
+    border : none;
+}
+
+/* ______________________________________ */
