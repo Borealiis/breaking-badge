@@ -17,7 +17,7 @@
   
   <body>
       <!-- <?php include_once('components/router.php'); ?> -->
-            <?php include('pages\login.php') ?>
+            <?php include('pages\login.php'); ?>
   
   </body>
   
