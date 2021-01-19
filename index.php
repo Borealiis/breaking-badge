@@ -14,11 +14,13 @@
   
       <title>Breaking Badge</title>
   </head>
-  
+  <header>
+
+          <?php include('components/navbar.php'); ?>
+  </header>
   <body>
       <!-- <?php include_once('components/router.php'); ?> -->
-            <?php include('pages\login.php'); ?>
-  
+           <?php include('components\router.php'); ?>
   </body>
   
   </html>
