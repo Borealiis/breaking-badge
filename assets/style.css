@@ -76,10 +76,17 @@ main {
     justify-content: space-around;
 }
 
-.viewUsers {
-
+.sidebar {
+    border-radius: 15px 0 0 15px;
 }
 
+.userHeader {
+    border-radius: 0 15px 0 0;
+}
+
+.otherUsersDo {
+    border-radius: 0 0 15px 0;
+}
 
 
 /* ______________________________________ */
