@@ -46,10 +46,6 @@ body{
 }
 
 /* ___________adminDashboard_____________ */
-main {
-
-}
-
 .mainContainerDashboard{
     width: 70%;
     margin: 0 auto;
@@ -78,6 +74,21 @@ main {
 
 .sidebar {
     border-radius: 15px 0 0 15px;
+}
+
+.progressBackground{
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.progressColor{
+    height:22px;
+    width: 50%;
+    background-color: turquoise;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 24px;
+
 }
 
 .userHeader {

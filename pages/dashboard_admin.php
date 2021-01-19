@@ -8,9 +8,21 @@
             <div class="badgeNotif">
                 <p>No news... Yet</p>
             </div>
-            <div class="myBadges"></div>
-            <div class="badgesToGet"></div>
-            <div class="myBadgesProgress"></div>
+            <div class="myBadges">
+                <p>My Badges:</p>
+                <p>You have [NUMBER] badges so far: </p>
+            </div>
+
+            <div class="badgesToGet">
+            </div>
+
+            <!--TODO: (aurore) progression using js or php-->
+            <div class="myBadgesProgress">
+                <p>Badge progress: </p>
+                <div class="progressBackground">
+                    <div id="badgeProgressBar" class="progressColor">50%</div>
+                </div>
+            </div>
         </div>
     </section>
 
