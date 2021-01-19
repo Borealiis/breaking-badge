@@ -1,6 +1,15 @@
-<!-- <?php
-  session_start();
-  ?> -->
+<?php
+session_start();
+try
+{
+    $bdd = new PDO("mysql:host=localhost;dbname=breaking_badge;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+?>
+
   
   <!DOCTYPE html>
   <html lang="en">
@@ -15,12 +24,16 @@
       <title>Breaking Badge</title>
   </head>
   <header>
-
           <?php include('components/navbar.php'); ?>
   </header>
   <body>
-      <!-- <?php include_once('components/router.php'); ?> -->
-           <?php include('components\router.php'); ?>
+          <?php 
+            if(empty($_SESSION)){
+              include_once('pages\login.php'); 
+            }
+
+          ?>
+
   </body>
   
   </html>
