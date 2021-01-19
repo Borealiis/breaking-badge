@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 19 jan. 2021 à 11:20
+-- Généré le : mar. 19 jan. 2021 à 13:56
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -20,6 +20,40 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `breaking_badge`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `table_badges`
+--
+
+DROP TABLE IF EXISTS `table_badges`;
+CREATE TABLE IF NOT EXISTS `table_badges` (
+  `badge_id` int(11) NOT NULL AUTO_INCREMENT,
+  `badge_name` varchar(200) COLLATE utf8mb4_bin NOT NULL,
+  `badge_desc` text COLLATE utf8mb4_bin NOT NULL,
+  `badge_color` varchar(100) COLLATE utf8mb4_bin NOT NULL,
+  `badge_shape` enum('ring','elem','stars') COLLATE utf8mb4_bin NOT NULL,
+  `badge_tag` enum('success','collection','admin') COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`badge_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Déchargement des données de la table `table_badges`
+--
+
+INSERT INTO `table_badges` (`badge_id`, `badge_name`, `badge_desc`, `badge_color`, `badge_shape`, `badge_tag`) VALUES
+(1, 'DeusEx', 'The godmode has nothing to envy them.', 'rainbow', 'stars', 'admin'),
+(2, 'Newbie', 'You\'re green, win 20 achievements to get out of the sandbox.', '#7cfc00', 'ring', 'success'),
+(3, 'Gamer', 'You win 20 achievements! Congratulations and welcome to the big league.', '#7fffd4', 'ring', 'success'),
+(4, 'Challenger', 'You win 50 achievements! Are you sure you can\'t do better than that?', '#00bfff', 'ring', 'success'),
+(5, 'Pro-gamer', 'You win 125 achievements! But where\'s the fun in that? Do your worst.', '#ff00ff', 'ring', 'success'),
+(6, 'Grandmaster', 'You win 250 achievements! You\'re a legend! Almost... Overachieving much?', '#ff0000', 'ring', 'success'),
+(7, 'Bronze', 'Novice collector.', '#614e1a', 'elem', 'collection'),
+(8, 'Silver', 'Amateur collector. You owned 50 games.', '#c0c0c0', 'elem', 'collection'),
+(9, 'Gold', 'Experienced collector. You owned 150 games.', '#ffd700', 'elem', 'collection'),
+(10, 'Diamond', 'Avid collector. You owned 300 games.', '#fffafa to #2b353e', 'elem', 'collection'),
+(11, 'Californium', 'Ultimate collector. You owned more than 500 games. Want to open a playstore?', '#5255f to #b8860b', 'elem', 'collection');
 
 -- --------------------------------------------------------
 
