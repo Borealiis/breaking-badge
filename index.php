@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 try
 {
@@ -31,6 +32,7 @@ catch (Exception $e)
             if(empty($_SESSION)){
               include_once('pages\login.php'); 
             }
+        <!--      <?php include('./pages/dashboard_admin.php'); ?> -->
 
           ?>
 
