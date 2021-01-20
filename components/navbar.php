@@ -17,7 +17,7 @@
 include_once('functions.php');
 ?>
 <nav class="flexNav">
-          <div class="centerV">BREAKING BADGE GAMING</div>
+          <div class="centerV"><a href="">BREAKING BADGE GAMING</a> </div>
               <div class="flexFlexNav">
                   <?php
                   if(!isAuthenticated()){
