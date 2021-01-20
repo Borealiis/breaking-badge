@@ -17,13 +17,17 @@
   <body>
           <?php 
             if(!isAuthenticated()){
-              include_once('pages\login.php'); 
+                  include_once('pages/login.php'); 
             }else{
-              // if()
-              //   include('./pages/dashboard_user.php');
-                include('./pages/dashboard_admin.php');
+              if($_SESSION['account_type'] === "ADMIN"){
+                  include('./pages/dashboard_admin.php');
+              }else{
+                  include('./pages/dashboard_user.php');
+              }
             }
             ?>
+
+              
   </body>
   
   </html>
