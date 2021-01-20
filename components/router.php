@@ -6,15 +6,15 @@
   $routes['badges'] = 'All badges';
   $routes['students'] = 'All students';
 
-  $requestedPage = $_GET['p'];
+  // include('pages\login.php');
+  // $requestedPage = $_GET['p'];
 
-  if(!isAuthenticated()){
-    // include the login page
-  }
-  if(array_key_exists($requestedPage, $routes)){
-    include_once('navbar.php');
+  // if(!isAuthenticated()){
+  // }
+  // if(array_key_exists($requestedPage, $routes)){
+  //   include_once('navbar.php');
 
-    // include the page
-  }
-  echo $requestedPage;
+  //   // include the page
+  // }
+  // echo $requestedPage;
 ?>

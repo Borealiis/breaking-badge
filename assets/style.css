@@ -1,3 +1,13 @@
+
+body{
+    background-image: url(./image/fond0.jpg);
+    background-size: cover; 
+
+    background-repeat:no-repeat ;  
+    margin: 0; 
+
+}
+
 /*------------ START CSS BADGES ------------*/
 
     /* COLOR SUCCESS */
@@ -59,3 +69,138 @@
     
 
 /*------------ END CSS BADGES ------------*/
+
+
+/* ___________loginPage_________________ */
+.flexLock{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.fa-unlock{
+    color: turquoise;
+}
+.flexLogPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 50px;
+    border-radius: 13px;
+    height: fit-content;
+    background-color: rgba(117, 190, 218, 0.3);
+    mix-blend-mode: normal;
+    border-radius: 13px;
+    transition-duration: 2s;
+
+}
+.flexLogPage:hover{
+    background-color: rgba(117, 190, 218, 0.6);
+    backdrop-filter: blur(3px);
+    /* padding: 0px; */
+}
+.sizeInput{
+    width: 220px;
+    height: 30px;
+    border : none;
+    margin: 10px;
+}
+
+.middleCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+
+/* ___________adminDashboard_____________ */
+.mainContainerDashboard{
+    width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divContainerDashboard {
+    display: flex;
+}
+
+.container {
+    background-color: rgba(117, 190, 218, 0.3);
+    margin: 5px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.badgesAndUsers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sidebar {
+    border-radius: 15px 0 0 15px;
+}
+
+.progressBackground{
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.progressColor{
+    height:22px;
+    width: 50%;
+    background-color: turquoise;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 24px;
+
+}
+
+.userHeader {
+    border-radius: 0 15px 0 0;
+}
+
+.otherUsersDo {
+    border-radius: 0 0 15px 0;
+}
+
+/* ___________NavBar_____________________ */
+.flexNav{
+    display: flex;
+    justify-content: space-between;
+    color: turquoise;
+    background: linear-gradient(rgb(35, 44, 48),rgba(1, 42, 58,0.5));
+    height: 50px;
+    min-width: 347px;
+}
+.flexFlexNav{
+    display: flex;
+    justify-content: space-between;
+}
+.centerV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px ;
+    transition-duration: 1s;
+}
+.centerVe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 20px ;
+    
+}
+.centerV:hover{
+    background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
+}
+
+
+
