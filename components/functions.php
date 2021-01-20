@@ -83,8 +83,8 @@ function signin(){
 
   function getBadges(){
     
-
   }
+
 
   function getUsers($pseudo){
     $cursor = createCursor();
@@ -101,8 +101,9 @@ function signin(){
         echo "<li>",$donnee['pseudo'],"</li>";
     }
     $recherche->closeCursor();
+    }
 
-  }
+
 
   function createBadge(){
 
