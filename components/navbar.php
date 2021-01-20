@@ -21,10 +21,10 @@ include_once('functions.php');
               <div class="flexFlexNav">
                   <?php
                   if(!isAuthenticated()){
-                    echo '<div class="centerV">Sign in</div>';
+                    echo '<div class="centerV"><a href="pages/signin.php">Sign in</a></div>';
                   }
                   else{
-                    echo '<div class="centerV"><a href="components\logout.php">Log out</a></div>';
+                    echo '<div class="centerV"><a href="components/logout.php">Log out</a></div>';
                   }
                   ?>  
 

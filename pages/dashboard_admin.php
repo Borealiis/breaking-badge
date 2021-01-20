@@ -3,7 +3,7 @@
 <main class="mainContainerDashboard">
     <div class="divContainerDashboard">
     <section class="container sidebar">
-        <div class="welcome">Welcome, [USER]</div>
+        <div class="welcome">Welcome, <?php echo $_SESSION['pseudo']; ?></div>
         <div class="sidebarBadgeInfo">
             <div class="badgeNotif">
                 <p>No news... Yet</p>
@@ -27,25 +27,51 @@
     </section>
 
     <div class="dashboardInfo">
-        <section class="container userHeader">
-<!--            <img src="" alt="" class="userImage">-->
-            <p>[IMAGE]</p>
-            <p>USERNAME</p>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
+
+
+
+        <section class="container userHeader headerBoxAdmin">
+<!--            <img src="" alt="" class="userImage">-->  
+            <div class=" boxAfficheImage">
+                <img class="imgAdminTest" src="assets\image\admin.jpg" alt="">
+              
+            </div>
+
+            <div class="columnHeaderBoxAdmin boxAfficheUser ">
+                <div class="titreBox">Profile</div > 
+                <div><?php echo $_SESSION['email']; ?></div>
+                <div><?php echo $_SESSION['pseudo']; ?></div>
+               
+              
+                
+            </div>
+            <div class="columnHeaderBoxAdmin boxAfficheUser">
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
+            </div>
         </section>
+
+
+
+
+
         <section class="container badgesAndUsers">
-            <div class="viewUsers">
-
-                <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a>
-
-                <div class="mostRecentUsers">
-                    <p class="subtitle">Last users</p>
+            <!-- <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a> -->
+                <div class="boxAfficheUser">
+                <div class="titreBox">Last users</div>
+                <div class="boxInsideAfficheUser">
                     <ul>
-                        <li>USER1</li>
-                        <li>USER2</li>
-                        <li>USER3</li>
+                    <?php
+                    $cursor = createCursor();
+                    $recherche = $cursor->query("SELECT * FROM users");
+                    while($donnee = $recherche->fetch())
+                    {
+                        echo "<li>",$donnee['pseudo'],"</li>";
+                    }
+                    $recherche->closeCursor();
+                    ?>
+                    </li>   
                     </ul>
-                </div>
+                </div>   
             </div>
             <div class="viewBadges">
                 <a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a>
