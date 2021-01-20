@@ -1,8 +1,8 @@
 
+
 body{
     background-image: url(./image/fond0.jpg);
     background-size: cover; 
-
     background-repeat:no-repeat ;  
     margin: 0; 
 
@@ -71,6 +71,7 @@ body{
 /*------------ END CSS BADGES ------------*/
 
 
+
 /* ___________loginPage_________________ */
 .flexLock{
     display: flex;
@@ -98,7 +99,6 @@ body{
 .flexLogPage:hover{
     background-color: rgba(117, 190, 218, 0.6);
     backdrop-filter: blur(3px);
-    /* padding: 0px; */
 }
 .sizeInput{
     width: 220px;
@@ -114,6 +114,101 @@ body{
     height: 90vh;
 }
 
+
+/* ___________userDashboard_____________ */
+main {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+.mainContainerUser{
+    height: 100vh;
+}
+.container {
+    margin: 5px;
+    justify-content: space-between;
+}
+
+.dashboardinfo{
+    height: 500px;
+}
+.container.sidebar{
+    margin-top: 20px;
+    width: 450px;
+    height: 800px;
+    background-color:  rgba(182, 194, 199, 0.781);
+    border: 1px solid rgba(96, 108, 148, 0.438);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px ;
+    box-shadow: 0px 1px 4px 0px;
+    text-align: center;
+}
+.welcome{
+    background-image: linear-gradient(120deg, rgba(204, 210, 221, 0.644),rgba(105, 211, 110, 0.329));
+    border: 1px solid rgba(96, 212, 50, 0.452);
+    box-shadow: 0px 1px 1px 0px;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.container.userHeader{
+    margin-top: 20px;
+    height: 170px;
+    background-color:  rgba(193, 200, 202, 0.781);
+    border: 1px solid rgba(117, 136, 218, 0.3);
+    border-top-right-radius: 15px;
+    box-shadow: 0px 1px 4px 0px;
+    margin-left: 30px;
+}
+.userinfo{
+    display: flex;
+    height: 80px;
+}
+.username{
+    margin: auto;
+}
+.description{
+    padding: 10px;
+}
+.container.Users{
+    margin-top: 50px;
+    height: 575px;
+    background-color: rgba(157, 197, 212, 0.3);
+    border: 1px solid rgba(117, 190, 218, 0.3);
+    border-bottom-right-radius: 15px ;
+    box-shadow: 0px 1px 4px 0px;
+    margin-left: 30px;
+    overflow: auto;
+}
+.Userslist{
+    height: 400px;
+    background-color: rgba(157, 197, 212, 0.438);
+    overflow: auto;
+    border: 1px solid rgba(117, 136, 218, 0.3);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.title{
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 3px 3px #7d8199;
+    text-align: center;
+}
+.Rankings{
+    height: 400px;
+    background-color: rgba(157, 197, 212, 0.438);
+    overflow: auto;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid rgba(117, 136, 218, 0.3);
+    border-radius: 15px;
+}
 
 /* ___________adminDashboard_____________ */
 .mainContainerDashboard{
@@ -201,6 +296,5 @@ body{
 .centerV:hover{
     background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
 }
-
 
 

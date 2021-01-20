@@ -1,11 +1,10 @@
 <?php
+// include_once('db.php');
 
-  // include_once('db.php');
-
-  // require_once('function.php');
 
   // Similar to "include_once" but for sessions
   // Calls "session_start()" unless it has already been called on the page
+
 
   // function session_start_once(){
   //   if(session_status() == PHP_SESSION_NONE){
@@ -45,6 +44,7 @@
   //   session_destroy();
   //   header("Location: ../index.php");
   // }
+
 
   function getBadges(){
 
