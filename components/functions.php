@@ -39,6 +39,30 @@ include_once('db.php');
     return false;
   }
 
+function signin(){
+  $noExist = false;
+  $cursor = createCursor();
+  $recherche = $cursor->query("SELECT * FROM users");
+      while($donnee = $recherche->fetch()){
+          if($donnee['email'] === $_POST['email']){
+              echo '<div class="middleText">','L',"'",'email ',$donnee['email'];
+              echo ' existe déjà !</div>';
+              $recherche->closeCursor();
+              $noExist = true;
+          }
+      }
+      if($noExist !== true){  
+          $email = $_POST['email'];
+          $pass = $_POST['pwd'];
+          $firstname = $_POST['firstname'];
+          $lastname = $_POST['lastname'];
+          $hachachePWD = password_hash("$pass",PASSWORD_DEFAULT);
+          $addUser = $cursor->prepare("INSERT INTO users (email,password,firstname,lastname,account_type) VALUES (?,?,?,?,?)"); 
+          $addUser->execute(array($email,$hachachePWD,$firstname,$lastname,"NORMIE")); 
+          echo '<div class="middleText" >Vous êtes inscrit !</div>';
+          $recherche->closeCursor();
+      } 
+}
   // function logout(){
   //   session_start();
   //   session_destroy();
