@@ -1,6 +1,8 @@
 <?php
   include_once('db.php');
 
+  // require_once('function.php');
+
 
   // Similar to "include_once" but for sessions
   // Calls "session_start()" unless it has already been called on the page
@@ -28,16 +30,16 @@
     $query->execute([$email]);
     $results = $query->fetch();
     
-    $cursor->closeCursor();
+    // $cursor->closeCursor();
 
     if(password_verify($password, $results['password'])){
       $_SESSION['user_id'] = $results['id'];
       $_SESSION['account_type'] = $results['account_type'];
       $_SESSION['email'] = $email;
 
-      return true
+      return true;
     }
-    return false
+    return false;
   }
 
   function logout(){
