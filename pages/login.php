@@ -1,3 +1,13 @@
+<?php 
+if(!empty($_POST['email'])){
+    if(login($_POST['email'], $_POST['pwd'])){
+        echo 'gg connecté';
+        header('location: index.php ');
+    }else{
+        echo 'nop';
+    }
+}
+?>
 
 <div class="middleCenter">
           <div class="flexLogPage">
@@ -11,21 +21,5 @@
   </div>
 </div>
 
-<?php 
-          if(isset(($_POST['email']))&&isset(($_POST['pwd']))){         
-            $recherche = $bdd->query("SELECT * FROM users");
-                while($donnee = $recherche->fetch()){
-                    if($donnee['email'] === $_POST['email'] ){
-                        $recherche->closeCursor();
-                        if(password_verify($_POST['pwd'],$donnee['password'])){
-                            $_SESSION['id'] = $donnee['id'];
-                            $_SESSION['statut'] = $donnee['password'];
-                            $_SESSION['email'] = $donnee['email'];
-                            header("Location: index.php");  
-                        }   
-                    }
-            } 
-        } 
-?>
 
 

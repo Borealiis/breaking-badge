@@ -13,11 +13,6 @@
 
 <!-- On fait la NAV bar en include -->
 
-
-
-
-
-
 <?php  
 include_once('functions.php');
 ?>
@@ -25,7 +20,7 @@ include_once('functions.php');
           <div class="centerV">BREAKING BADGE GAMING</div>
               <div class="flexFlexNav">
                   <?php
-                  if(empty($_SESSION)){
+                  if(!isAuthenticated()){
                     echo '<div class="centerV">Sign in</div>';
                   }
                   else{

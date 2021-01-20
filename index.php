@@ -29,13 +29,12 @@ catch (Exception $e)
   </header>
   <body>
           <?php 
-            if(empty($_SESSION)){
+            if(!isAuthenticated()){
               include_once('pages\login.php'); 
+            }else{
+                include('./pages/dashboard_admin.php');
             }
-        <!--      <?php include('./pages/dashboard_admin.php'); ?> -->
-
-          ?>
-
+            ?>
   </body>
   
   </html>
