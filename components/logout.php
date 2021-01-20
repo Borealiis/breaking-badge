@@ -1,6 +1,5 @@
 <?php
-    require_once('functions.php');
-    logout();
+    session_start();
+    session_destroy();
+    header("Location: ../index.php");
 ?>
-
-    
