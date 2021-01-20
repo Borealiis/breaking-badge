@@ -1,7 +1,10 @@
 body{
     background-image: url(./image/fond0.jpg);
     background-size: cover; 
-    background-repeat:no-repeat ;
+
+    background-repeat:no-repeat ;  
+    margin: 0; 
+
 }
 
 /* ___________loginPage_________________ */
@@ -30,7 +33,8 @@ body{
 }
 .flexLogPage:hover{
     background-color: rgba(117, 190, 218, 0.6);
-    /* padding: 55px; */
+    backdrop-filter: blur(3px);
+    /* padding: 0px; */
 }
 .sizeInput{
     width: 220px;
@@ -38,12 +42,14 @@ body{
     border : none;
     margin: 10px;
 }
+
 .middleCenter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 90vh;
 }
+
 
 /* ___________adminDashboard_____________ */
 .mainContainerDashboard{
@@ -99,5 +105,37 @@ body{
     border-radius: 0 0 15px 0;
 }
 
+/* ___________NavBar_____________________ */
+.flexNav{
+    display: flex;
+    justify-content: space-between;
+    color: turquoise;
+    background: linear-gradient(rgb(35, 44, 48),rgba(1, 42, 58,0.5));
+    height: 50px;
+    min-width: 347px;
+}
+.flexFlexNav{
+    display: flex;
+    justify-content: space-between;
+}
+.centerV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px ;
+    transition-duration: 1s;
+}
+.centerVe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 20px ;
+    
+}
+.centerV:hover{
+    background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
+}
 
-/* ______________________________________ */
+
