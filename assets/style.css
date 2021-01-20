@@ -375,6 +375,53 @@ main {
     background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
 }
 
+/* ___________All Users_____________________ */
+
+.allUsers {
+    min-width: 45%;
+    max-width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.allUsersTitle {
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.displayedUser{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    /*border-radius: 15px;*/
+    justify-content: space-between;
+}
+
+.displayedUser:first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+.displayedUser:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.picAndUsername {
+    display: flex;
+    /*flex-direction: row-reverse;*/
+}
+
+.picAndUsername p {
+    margin-right: 15px;
+}
+
+
+.usersBadgeButton{
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* ------------ START ALL BADGES ------------ */
 
