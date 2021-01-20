@@ -10,7 +10,7 @@
 </head>
 <body>
     <main class="allUsers">
-        <p>All users</p>
+        <p class="container allUsersTitle">All users</p>
 
         <div class="">
 
@@ -29,30 +29,32 @@
                     <a href="" target="_blank"><input type="button" value="Give Badge" class="giveBadge"></a>
                     <a href="" target="_blank"><input type="button" value="Remove Badge" class="removeBadge"></a>
                 </div>
-
-                <p>[PICTURE]</p>
-                <p>USERNAME2</p>
+                <div class="picAndUsername">
+                    <p>[PICTURE]</p>
+                    <p>USERNAME2</p>
+                </div>
             </div>
-
             <div class="container displayedUser">
                 <div class="usersBadgeButtons">
                     <a href="" target="_blank"><input type="button" value="Give Badge" class="giveBadge"></a>
                     <a href="" target="_blank"><input type="button" value="Remove Badge" class="removeBadge"></a>
                 </div>
-
-                <p>[PICTURE]</p>
-                <p>USERNAME3</p>
+                <div class="picAndUsername">
+                    <p>[PICTURE]</p>
+                    <p>USERNAME3</p>
+                </div>
             </div>
-
             <div class="container displayedUser">
                 <div class="usersBadgeButtons">
                     <a href="" target="_blank"><input type="button" value="Give Badge" class="giveBadge"></a>
                     <a href="" target="_blank"><input type="button" value="Remove Badge" class="removeBadge"></a>
                 </div>
-
-                <p>[PICTURE]</p>
-                <p>USERNAME4</p>
+                <div class="picAndUsername">
+                    <p>[PICTURE]</p>
+                    <p>USERNAME4</p>
+                </div>
             </div>
+
 
         </div>
 
