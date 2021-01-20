@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
-    <div class="elem californium"></div>
+    <div class="ring newbie">∞</div>
 </body>
 </html>

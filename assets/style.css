@@ -14,57 +14,94 @@ body{
 .deusex{
     border-color: white;
     background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    color: white;
 }
 .newbie{
     border-color: lawngreen;
+    background-color:black;
+    color: white;
 }
 .gamer{
     border-color: aquamarine;
+    background-color: black;
+    color: white;
 }
 .challenger{
     border-color: deepskyblue;
+    background-color: black;
+    color: white;
 }
 .pro-gamer{
     border-color: fuchsia;
+    background-color: black;
+    color: white;
 }
 .grandmaster{
     border-color: red;
+    background-color: black;
+    color: white;
 }
     /* COLOR COLLECTION */
 .bronze{
     background-color: #614e1a;
+    color: white;
 }
 .silver{
     background-color: #c0c0c0;
+    color: black;
 }
 .gold{
     background-color: #ffd700;
+    color: black;
 }
 .diamond{
-    background: linear-gradient(to bottom right, #fffafa 25%, #2b353e 100%);
+    background: linear-gradient(to bottom right, #fffafa 10%, #40E0D0 100%);
+    color: black;
 }
 .californium{
     background: linear-gradient(to bottom right, #52555d 25%, #b8860b 100%);
+    color: white;
 }
 
     /* SHAPE */
 .ring{
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border-width: 5px;
     border-style: solid;
+    box-shadow: inset 0 0 15px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    transform: rotate(-15deg);
 }
 .elem{
     width: 60px;
     height: 75px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
 }
 .stars {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border-width: 5px;
     border-style: double;
+    box-shadow: inset 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
 }
     
 
