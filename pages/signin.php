@@ -20,7 +20,7 @@ include('../components/navbar.php');
 </body>
 </html>
 <?php
-  if((!empty(isset($_POST['email'])))&&!empty(isset($_POST['pwd']))&&!empty(isset($_POST['firstname']))&&!empty(isset($_POST['lastname']))){
+  if((!empty(isset($_POST['email'])))&&!empty(isset($_POST['pwd']))&&!empty(isset($_POST['pseudo']))){
     signin();
     } 
 
@@ -30,9 +30,7 @@ include('../components/navbar.php');
 
               <div class="flexLock"><i class="fas fa-unlock fa-9x"></i></div>
               <form action="" method="post">
-              <div><input class="sizeInput"type="text" placeholder="First Name" name="firstname"></div>
-              <div><input class="sizeInput"type="text" placeholder="Last name" name="lastname"></div>
-
+              <div><input class="sizeInput"type="text" placeholder="First Name" name="pseudo"></div>
               <div><input class="sizeInput"type="text" placeholder="Email" name="email"></div>
               <div><input class="sizeInput"type="text" placeholder="Password" name="pwd"></div>
 
