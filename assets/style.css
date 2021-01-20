@@ -14,57 +14,94 @@ body{
 .deusex{
     border-color: white;
     background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    color: white;
 }
 .newbie{
     border-color: lawngreen;
+    background-color:black;
+    color: white;
 }
 .gamer{
     border-color: aquamarine;
+    background-color: black;
+    color: white;
 }
 .challenger{
     border-color: deepskyblue;
+    background-color: black;
+    color: white;
 }
 .pro-gamer{
     border-color: fuchsia;
+    background-color: black;
+    color: white;
 }
 .grandmaster{
     border-color: red;
+    background-color: black;
+    color: white;
 }
     /* COLOR COLLECTION */
 .bronze{
     background-color: #614e1a;
+    color: white;
 }
 .silver{
     background-color: #c0c0c0;
+    color: black;
 }
 .gold{
     background-color: #ffd700;
+    color: black;
 }
 .diamond{
-    background: linear-gradient(to bottom right, #fffafa 25%, #2b353e 100%);
+    background: linear-gradient(to bottom right, #fffafa 10%, #40E0D0 100%);
+    color: black;
 }
 .californium{
     background: linear-gradient(to bottom right, #52555d 25%, #b8860b 100%);
+    color: white;
 }
 
     /* SHAPE */
 .ring{
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border-width: 5px;
     border-style: solid;
+    box-shadow: inset 0 0 15px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    transform: rotate(-15deg);
 }
 .elem{
     width: 60px;
     height: 75px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
 }
 .stars {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border-width: 5px;
     border-style: double;
+    box-shadow: inset 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
 }
     
 
@@ -126,7 +163,6 @@ main {
 }
 .container {
     margin: 5px;
-    justify-content: space-between;
 }
 
 .dashboardinfo{
@@ -164,7 +200,6 @@ main {
     border: 1px solid rgba(117, 136, 218, 0.3);
     border-top-right-radius: 15px;
     box-shadow: 0px 1px 4px 0px;
-    margin-left: 30px;
 }
 .userinfo{
     display: flex;
@@ -249,6 +284,21 @@ main {
 }
 
 /* ___________adminDashboard_____________ */
+.headerBoxAdmin{
+    display: flex;
+}
+.columnHeaderBoxAdmin{
+    display: flex;
+    flex-direction: column;
+
+}
+.imgAdminTest{
+    width: 50%;
+}
+.imageBoxAdminHeader{
+    width: fit-content;
+}
+
 .mainContainerDashboard{
     width: 70%;
     margin: 0 auto;
@@ -271,8 +321,8 @@ main {
 
 .badgesAndUsers {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+
 }
 
 .sidebar {
@@ -300,6 +350,34 @@ main {
 
 .otherUsersDo {
     border-radius: 0 0 15px 0;
+}
+.boxAfficheUser{
+    border: aqua solid 1px;
+    border-radius: 5px;  
+    width: 90%;
+    margin: 5px;
+}
+.boxAfficheImage{
+    border: aqua solid 1px;
+    border-radius: 5px;  
+    width: fit-content;
+    margin: 5px;
+    background-image: url(image/admin.jpg);
+    background-size: contain;
+}
+.titreBox{
+    padding: 5px;
+    background-color: rgb(183, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+.boxInsideAfficheUser{
+    padding: 10px;
+    background-color: rgba(225, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+.viewBadges{
+    width: 90%;
+    margin: 5px;
 }
 
 /* ___________NavBar_____________________ */
@@ -335,4 +413,74 @@ main {
     background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
 }
 
+/* ___________All Users_____________________ */
 
+.allUsers {
+    min-width: 45%;
+    max-width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.allUsersTitle {
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.displayedUser{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    /*border-radius: 15px;*/
+    justify-content: space-between;
+}
+
+.displayedUser:first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+.displayedUser:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.picAndUsername {
+    display: flex;
+    /*flex-direction: row-reverse;*/
+}
+
+.picAndUsername p {
+    margin-right: 15px;
+}
+
+
+.usersBadgeButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ------------ START ALL BADGES ------------ */
+
+.allBadges{
+    width: 60%;
+    min-width: 250px;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.h2Badges{
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.displayedBadges{
+    border-radius: 0 0 15px 15px;
+}
+
+/* ------------ END ALL BADGES ------------ */

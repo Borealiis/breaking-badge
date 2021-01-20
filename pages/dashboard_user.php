@@ -1,16 +1,3 @@
-<!-- <div id="notifications_bar">
-
-
-</div>
-<div id="user_bar">
-</div>
-
-<div id="dashboard">
-</div>
-<div></div>
-
-<div></div>
--->
 <main id="mainContainerUser">
     <section class="container sidebarnotif">
         <div class="welcome">
