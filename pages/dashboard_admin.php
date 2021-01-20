@@ -50,10 +50,6 @@
             </div>
         </section>
 
-
-
-
-
         <section class="container badgesAndUsers">
             <!-- <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a> -->
                 <div class="boxAfficheUser">
@@ -61,13 +57,7 @@
                 <div class="boxInsideAfficheUser">
                     <ul>
                     <?php
-                    $cursor = createCursor();
-                    $recherche = $cursor->query("SELECT * FROM users");
-                    while($donnee = $recherche->fetch())
-                    {
-                        echo "<li>",$donnee['pseudo'],"</li>";
-                    }
-                    $recherche->closeCursor();
+                        getAllUsers();
                     ?>
                     </li>   
                     </ul>
@@ -85,7 +75,18 @@
         </section>
 
         <section class="container otherUsersDo">
-            <p>BADGES OTHER USERS</p>
+            <p>BADGES USERS</p>
+            <?php 
+
+            $cursor = createCursor();
+            $table = $cursor->query('SELECT pseudo,badge_name FROM users_badges INNER JOIN users ON users.pseudo = users_badges.user_id INNER JOIN table_badges ON table_badges.badge_name = users_badges.badge_id' );
+            while($donnees = $table->fetch())
+            {   
+                echo '<div>',$donnees['pseudo'],'<br>',$donnees['badge_name'],'</div>';
+            }
+            $table->closeCursor();
+            ?> 
+            
         </section>
     </div>
     </div>

@@ -83,22 +83,27 @@ function signin(){
 
   function getBadges(){
     
-
   }
 
-  function getAllBadges(){
+
+  function getUsers($pseudo){
     $cursor = createCursor();
-    $recherche = $cursor->query("SELECT * FROM table_badges");
+    $query = $cursor->prepare('SELECT id, password,account_type,pseudo from users WHERE pseudo=?');
+    $query->execute($pseudo);
+    $results = $query->fetch();
+          
+  }  
+  function getAllUsers(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM users");
     while($donnee = $recherche->fetch())
     {
-      echo $donnee['badge_name'];
+        echo "<li>",$donnee['pseudo'],"</li>";
     }
     $recherche->closeCursor();
-  }
+    }
 
-  function getUsers(){
 
-  }
 
   function createBadge(){
 
@@ -113,10 +118,11 @@ function signin(){
   }
 
   function grantBadgeToUser($badge_id, $user_id){
-
+    $cursor = createCursor();
+    $addBage = $cursor->prepare("INSERT INTO users_badges (badge_id,user_id) VALUES (?,?)"); 
+    $addUser->execute(array($badge_id,$user_id));
   }
-
   function removeBadgeFromUser($badge_id, $user_id){
-
+    
   }
 ?>
