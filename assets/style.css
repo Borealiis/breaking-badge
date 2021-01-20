@@ -163,7 +163,6 @@ main {
 }
 .container {
     margin: 5px;
-    justify-content: space-between;
 }
 
 .dashboardinfo{
@@ -198,7 +197,6 @@ main {
     border: 1px solid rgba(117, 136, 218, 0.3);
     border-top-right-radius: 15px;
     box-shadow: 0px 1px 4px 0px;
-    margin-left: 30px;
 }
 .userinfo{
     display: flex;
@@ -248,6 +246,21 @@ main {
 }
 
 /* ___________adminDashboard_____________ */
+.headerBoxAdmin{
+    display: flex;
+}
+.columnHeaderBoxAdmin{
+    display: flex;
+    flex-direction: column;
+
+}
+.imgAdminTest{
+    width: 50%;
+}
+.imageBoxAdminHeader{
+    width: fit-content;
+}
+
 .mainContainerDashboard{
     width: 70%;
     margin: 0 auto;
@@ -270,8 +283,8 @@ main {
 
 .badgesAndUsers {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+
 }
 
 .sidebar {
@@ -299,6 +312,34 @@ main {
 
 .otherUsersDo {
     border-radius: 0 0 15px 0;
+}
+.boxAfficheUser{
+    border: aqua solid 1px;
+    border-radius: 5px;  
+    width: 90%;
+    margin: 5px;
+}
+.boxAfficheImage{
+    border: aqua solid 1px;
+    border-radius: 5px;  
+    width: fit-content;
+    margin: 5px;
+    background-image: url(image/admin.jpg);
+    background-size: contain;
+}
+.titreBox{
+    padding: 5px;
+    background-color: rgb(183, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+.boxInsideAfficheUser{
+    padding: 10px;
+    background-color: rgba(225, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+.viewBadges{
+    width: 90%;
+    margin: 5px;
 }
 
 /* ___________NavBar_____________________ */
