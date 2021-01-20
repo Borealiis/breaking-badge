@@ -86,6 +86,16 @@ function signin(){
 
   }
 
+  function getAllBadges(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM table_badges");
+    while($donnee = $recherche->fetch())
+    {
+      echo $donnee['badge_name'];
+    }
+    $recherche->closeCursor();
+  }
+
   function getUsers(){
 
   }
