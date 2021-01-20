@@ -31,10 +31,10 @@
     background-color: #ffd700;
 }
 .diamond{
-    background: linear-gradient(to bottom right, #fffafa 0%, #2b353e 100%);
+    background: linear-gradient(to bottom right, #fffafa 25%, #2b353e 100%);
 }
 .californium{
-    background: linear-gradient(to bottom right, #52555d 0%, #b8860b 100%);
+    background: linear-gradient(to bottom right, #52555d 25%, #b8860b 100%);
 }
 
     /* SHAPE */
@@ -46,15 +46,15 @@
     border-style: solid;
 }
 .elem{
-    width: 75px;
-    height: 100px;
+    width: 60px;
+    height: 75px;
 }
 .stars {
     width: 75px;
     height: 75px;
     border-radius: 50%;
     border-width: 5px;
-    border-style: solid;
+    border-style: double;
 }
     
 

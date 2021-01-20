@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
-    <div class="stars deusex"></div>
+    <div class="elem californium"></div>
 </body>
 </html>
