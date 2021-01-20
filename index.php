@@ -1,17 +1,4 @@
-<?php
 
-session_start();
-try
-{
-    $bdd = new PDO("mysql:host=localhost;dbname=breaking_badge;charset=utf8", "root", "root", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-?>
-
-  
   <!DOCTYPE html>
   <html lang="en">
   
@@ -32,6 +19,8 @@ catch (Exception $e)
             if(!isAuthenticated()){
               include_once('pages\login.php'); 
             }else{
+              // if()
+              //   include('./pages/dashboard_user.php');
                 include('./pages/dashboard_admin.php');
             }
             ?>
