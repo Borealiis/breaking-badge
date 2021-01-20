@@ -26,11 +26,12 @@ include_once('db.php');
   function login($email, $password){
     // session_start_once();
     $cursor = createCursor();
-    $query = $cursor->prepare('SELECT id, password,account_type from users WHERE email=?');
+    $query = $cursor->prepare('SELECT id, password,account_type,pseudo from users WHERE email=?');
     $query->execute([$email]);
     $results = $query->fetch();
     // $cursor->closeCursor();
     if(!empty($results) && password_verify($password, $results['password'])){
+      $_SESSION['pseudo'] = $results['pseudo'];
       $_SESSION['user_id'] = $results['id'];
       $_SESSION['account_type'] = $results['account_type'];
       $_SESSION['email'] = $email;
@@ -54,11 +55,10 @@ function signin(){
       if($noExist !== true){  
           $email = $_POST['email'];
           $pass = $_POST['pwd'];
-          $firstname = $_POST['firstname'];
-          $lastname = $_POST['lastname'];
+          $pseudo = $_POST['pseudo'];
           $hachachePWD = password_hash("$pass",PASSWORD_DEFAULT);
-          $addUser = $cursor->prepare("INSERT INTO users (email,password,firstname,lastname,account_type) VALUES (?,?,?,?,?)"); 
-          $addUser->execute(array($email,$hachachePWD,$firstname,$lastname,"NORMIE")); 
+          $addUser = $cursor->prepare("INSERT INTO users (email,password,pseudo,account_type) VALUES (?,?,?,?,?)"); 
+          $addUser->execute(array($email,$hachachePWD,$pseudo,"NORMIE")); 
           echo '<div class="middleText" >Vous êtes inscrit !</div>';
           $recherche->closeCursor();
       } 
@@ -69,23 +69,20 @@ function signin(){
   //   header("Location: ../index.php");
   // }
 
-          // en attente
-//   if(isset(($_POST['email']))&&isset(($_POST['pwd']))){         
-//     $recherche = $bdd->query("SELECT * FROM users");
-//         while($donnee = $recherche->fetch()){
-//             if($donnee['email'] === $_POST['email'] ){
-//                 $recherche->closeCursor();
-//                 if(password_verify($_POST['pwd'],$donnee['password'])){
-//                     $_SESSION['id'] = $donnee['id'];
-//                     $_SESSION['statut'] = $donnee['password'];
-//                     $_SESSION['email'] = $donnee['email'];
-//                     header("Location: index.php");  
-//                 }   
-//             }
-//     } 
-// } 
+
+
+  function getAllbadges(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM table_badges");
+    while($donnee = $recherche->fetch())
+    {
+        echo $donnee['badge_name'];
+    }
+    $recherche->closeCursor();
+  } 
 
   function getBadges(){
+    
 
   }
 
