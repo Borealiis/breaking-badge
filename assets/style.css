@@ -1,8 +1,76 @@
+
+
 body{
     background-image: url(./image/fond0.jpg);
     background-size: cover; 
-    background-repeat:no-repeat ;
+    background-repeat:no-repeat ;  
+    margin: 0; 
+
 }
+
+/*------------ START CSS BADGES ------------*/
+
+    /* COLOR SUCCESS */
+.deusex{
+    border-color: white;
+    background: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+}
+.newbie{
+    border-color: lawngreen;
+}
+.gamer{
+    border-color: aquamarine;
+}
+.challenger{
+    border-color: deepskyblue;
+}
+.pro-gamer{
+    border-color: fuchsia;
+}
+.grandmaster{
+    border-color: red;
+}
+    /* COLOR COLLECTION */
+.bronze{
+    background-color: #614e1a;
+}
+.silver{
+    background-color: #c0c0c0;
+}
+.gold{
+    background-color: #ffd700;
+}
+.diamond{
+    background: linear-gradient(to bottom right, #fffafa 25%, #2b353e 100%);
+}
+.californium{
+    background: linear-gradient(to bottom right, #52555d 25%, #b8860b 100%);
+}
+
+    /* SHAPE */
+.ring{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+}
+.elem{
+    width: 60px;
+    height: 75px;
+}
+.stars {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: double;
+}
+    
+
+/*------------ END CSS BADGES ------------*/
+
+
 
 /* ___________loginPage_________________ */
 .flexLock{
@@ -30,7 +98,7 @@ body{
 }
 .flexLogPage:hover{
     background-color: rgba(117, 190, 218, 0.6);
-    /* padding: 55px; */
+    backdrop-filter: blur(3px);
 }
 .sizeInput{
     width: 220px;
@@ -38,12 +106,14 @@ body{
     border : none;
     margin: 10px;
 }
+
 .middleCenter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 90vh;
 }
+
 
 /* ___________userDashboard_____________ */
 main {
@@ -139,4 +209,92 @@ main {
     border: 1px solid rgba(117, 136, 218, 0.3);
     border-radius: 15px;
 }
-/* ______________________________________ */
+
+/* ___________adminDashboard_____________ */
+.mainContainerDashboard{
+    width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divContainerDashboard {
+    display: flex;
+}
+
+.container {
+    background-color: rgba(117, 190, 218, 0.3);
+    margin: 5px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.badgesAndUsers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sidebar {
+    border-radius: 15px 0 0 15px;
+}
+
+.progressBackground{
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.progressColor{
+    height:22px;
+    width: 50%;
+    background-color: turquoise;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 24px;
+
+}
+
+.userHeader {
+    border-radius: 0 15px 0 0;
+}
+
+.otherUsersDo {
+    border-radius: 0 0 15px 0;
+}
+
+/* ___________NavBar_____________________ */
+.flexNav{
+    display: flex;
+    justify-content: space-between;
+    color: turquoise;
+    background: linear-gradient(rgb(35, 44, 48),rgba(1, 42, 58,0.5));
+    height: 50px;
+    min-width: 347px;
+}
+.flexFlexNav{
+    display: flex;
+    justify-content: space-between;
+}
+.centerV{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px ;
+    transition-duration: 1s;
+}
+.centerVe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 20px ;
+    
+}
+.centerV:hover{
+    background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
+}
+
+
