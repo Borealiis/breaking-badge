@@ -297,4 +297,28 @@ main {
     background: linear-gradient(rgb(96, 117, 126),rgba(1, 42, 58,0.5));
 }
 
+/* ___________All Users_____________________ */
 
+.allUsers {
+    width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.displayedUser{
+    margin-top: 5px;
+    display: flex;
+    /*flex-direction: column;*/
+    border-radius: 15px;
+}
+
+.picAndUsername {
+    /*flex-direction: row-reverse;*/
+}
+
+.usersBadgeButton{
+    align-self: flex-end;
+}
