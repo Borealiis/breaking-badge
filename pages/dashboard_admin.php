@@ -60,7 +60,8 @@
         <section class="container badgesAndUsers">
             <!-- <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a> -->
                 <div class="boxAfficheUser">
-                <div class="titreBox ">Last users</div>
+         
+                <div class="titreBox flexBoxAfficheUser">Last users <button id="boutonAfficheAllUsers">All Users</button></div>
                 <div class="boxInsideAfficheUser">
                     <ul>
                     <?php
@@ -69,18 +70,19 @@
                     </li>   
                     </ul>
                 </div>   
-            </div>
-            <div class="viewBadges">
-                <a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a>
-                <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a>
-
-                <div class="recentBadges">
-                    <p class="subtitle">Last badges</p>
+                <div class="viewBadges">
+                    </div><div id="allUserModal"><?php include('pages\all_users.php') ?></div>
+                    <a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a>
+                    <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a>
+                    
+                    <div class="recentBadges">
+                        
+                        <p class="subtitle">Last badges</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="container otherUsersDo ">
+            </section>
+            
+            <section class="container otherUsersDo ">
            
             <div class="titreBox ">BADGES USERS</div>
             <div class="boxInsideAfficheUser">
@@ -102,4 +104,5 @@
     </div>
     </div>
 </main>
+<div id="allUserModal"><?php include('pages\all_users.php') ?></div>
 <script src="assets\anim.js"></script>

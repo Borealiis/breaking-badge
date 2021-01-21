@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
-    <div class="ring newbie">∞</div>
+    <div class="ring deeppinksuccess">Hg</div>
 </body>
 </html>
