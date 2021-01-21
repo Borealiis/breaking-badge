@@ -10,9 +10,9 @@
 </head>
 <body>
     <main class="allBadges">
-        <div class="container h2Badges"><h2>All users</h2></div>
+        <div class="container h2Badges"><h2>All Badges</h2></div>
         <section class="container displayedBadges">
-                <div>
+                <div class="divBadges">
                     <?php include_once('../components/functions.php'); 
                     
                     getAllBadges(); ?>

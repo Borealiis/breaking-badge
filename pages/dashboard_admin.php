@@ -9,8 +9,14 @@
                 <p>No news... Yet</p>
             </div>
             <div class="myBadges">
-                <p>My Badges:</p>
-                <p>You have [NUMBER] badges so far: </p>
+                <div class="tuile">
+                    <div class="titreBox">My Badges:</div>
+                    <div class="marqWhite">
+                         <p>You have  <?php  amountBadges(); ?>  badges so far: </p>
+                    </div>
+                </div>
+                
+                
             </div>
 
             <div class="badgesToGet">
@@ -37,37 +43,28 @@
               
             </div>
 
-            <div class="columnHeaderBoxAdmin boxAfficheUser ">
+            <div class="columnHeaderBoxAdmin boxAfficheUser blur ">
                 <div class="titreBox">Profile</div > 
-                <div><?php echo $_SESSION['email']; ?></div>
-                <div><?php echo $_SESSION['pseudo']; ?></div>
-               
-              
-                
+                <div class="alignTextAdminBox" >
+                    <div><?php echo $_SESSION['pseudo']; ?></div>
+                    <div><?php echo $_SESSION['email']; ?></div>
+                </div>
+
+    
             </div>
             <div class="columnHeaderBoxAdmin boxAfficheUser">
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
+                <p class="description titreBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
             </div>
         </section>
-
-
-
-
 
         <section class="container badgesAndUsers">
             <!-- <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a> -->
                 <div class="boxAfficheUser">
-                <div class="titreBox">Last users</div>
+                <div class="titreBox ">Last users</div>
                 <div class="boxInsideAfficheUser">
                     <ul>
                     <?php
-                    $cursor = createCursor();
-                    $recherche = $cursor->query("SELECT * FROM users");
-                    while($donnee = $recherche->fetch())
-                    {
-                        echo "<li>",$donnee['pseudo'],"</li>";
-                    }
-                    $recherche->closeCursor();
+                        getAllUsers();
                     ?>
                     </li>   
                     </ul>
@@ -79,14 +76,30 @@
 
                 <div class="recentBadges">
                     <p class="subtitle">Last badges</p>
-
                 </div>
             </div>
         </section>
 
-        <section class="container otherUsersDo">
-            <p>BADGES OTHER USERS</p>
+        <section class="container otherUsersDo ">
+           
+            <div class="titreBox ">BADGES USERS</div>
+            <div class="boxInsideAfficheUser">
+                <table>
+                <tr>
+                    <td>Pseudo</td>
+                    <td>Badge</td>
+                </tr>
+                <tr>   
+                    <?php 
+                        getAllUsersBadges();
+                    ?> 
+                </tr>
+                </table>    
+            </div>
+        
+            
         </section>
     </div>
     </div>
 </main>
+<script src="assets\anim.js"></script>

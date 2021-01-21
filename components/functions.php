@@ -67,25 +67,69 @@ function signin(){
   //   session_start();
   //   session_destroy();
   //   header("Location: ../index.php");
-  // }
 
   function getBadges(){
     
-
   }
 
-  function getAllBadges(){
+  function getAllbadges(){
     $cursor = createCursor();
     $recherche = $cursor->query("SELECT * FROM table_badges");
     while($donnee = $recherche->fetch())
     {
-      echo $donnee['badge_name'];
+        echo '<div class=\'badgeAndDesc\'><div class=\'badgeSolo\'><div class=\'' . $donnee['badge_color'] . ' ' . $donnee['badge_shape'] . '\'>' . $donnee['badge_content'] . '</div></div>';
+        echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
     }
     $recherche->closeCursor();
+
   }
 
-  function getUsers(){
+  function getUsers($pseudo){
+    $cursor = createCursor();
+    $query = $cursor->prepare('SELECT id, password,account_type,pseudo from users WHERE pseudo=?');
+    $query->execute($pseudo);
+    $results = $query->fetch();
+          
+  }  
 
+  function getAllUsers(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM users");
+    while($donnee = $recherche->fetch())
+    {
+        echo "<li>",$donnee['pseudo'],"</li>";
+    }
+    $recherche->closeCursor();
+    }
+
+
+
+  function getAllUsersBadges(){
+    $cursor = createCursor();
+    $table = $cursor->query('SELECT pseudo,badge_name FROM users_badges INNER JOIN users ON users.id = users_badges.user_id INNER JOIN
+    table_badges ON table_badges.badge_id = users_badges.badge_id;' );
+    while($donnees = $table->fetch())
+    {   
+        echo '<td>',$donnees['pseudo'],'</td><td>',$donnees['badge_name'],'</td>';
+    }
+    $table->closeCursor();
+  }
+
+  function amountBadges(){
+    $id = $_SESSION['user_id'];
+    $number = 0;
+    $cursor = createCursor();
+    $query = $cursor->prepare('SELECT badge_id,user_id from users_badges WHERE user_id=?');
+    $query->execute([$id]);
+    while($results = $query->fetch())
+    {   
+        if($results['user_id']== $id ){
+            $number++;
+            echo $number;
+        }
+            
+    }
+    
   }
 
   function createBadge(){
@@ -101,10 +145,12 @@ function signin(){
   }
 
   function grantBadgeToUser($badge_id, $user_id){
-
+    $cursor = createCursor();
+    $addBage = $cursor->prepare("INSERT INTO users_badges (badge_id,user_id) VALUES (?,?)"); 
+    $addUser->execute(array($badge_id,$user_id));
   }
-
   function removeBadgeFromUser($badge_id, $user_id){
-
+    
   }
+
 ?>
