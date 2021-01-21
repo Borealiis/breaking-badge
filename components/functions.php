@@ -115,18 +115,14 @@ function signin(){
       $cursor = createCursor();
       $recherche = $cursor->query("SELECT * FROM users");
       while($donnee = $recherche->fetch())
+      // $tour = 0;
       {
         $idP = $donnee['id'];
-          echo '
+        
+           echo '
           <div class="container displayedUser">
           <div class="usersBadgeButtons">
-          <form method="post">
-            <select name="badges">'
-              ,giveBadgeNameOptionList(),
-            '</select>
-                  <a href="" target="_blank"><input  type="submit" value="Give Badge" class="giveBadge"></a>
-                  <a href="" target="_blank"><input  type="submit" value="Remove Badge" class="removeBadge"></a> 
-          </form>    
+   
           </div>
           <div class="flexBoxModal">       
           <p>',getBadges($idP),'</p>
@@ -136,15 +132,15 @@ function signin(){
           <p>',$donnee['pseudo'],'</p>
           </div>
           </div>';
-      }
-      $recherche->closeCursor();
+          
 
+        } 
+        $recherche->closeCursor();
       }
-    // function addBadges(){
-    //   if(!empty(isset($_POST['badges'])){
-
-    //   }      
-    // }      
+    function addBadges(){
+ 
+    
+    }      
 
   function displayAllUsers(){
     $cursor = createCursor();
@@ -216,13 +212,35 @@ function signin(){
     
   }
   function giveBadgeNameOptionList(){
-
   $cursor = createCursor();
+     
         $recherche = $cursor->query("SELECT * FROM table_badges ");
         while($donnee = $recherche->fetch())
         {
-            echo '<option value="',$donnee['badge_name'],'">',$donnee['badge_name'],'</option>';
+            echo '<option name="badges" value="',$donnee['badge_id'],'">',$donnee['badge_name'],'</option>';
         }
+        
         $recherche->closeCursor();
   }
+  function giveUserOptionList(){
+    $cursor = createCursor();
+          $recherche = $cursor->query("SELECT * FROM users ");
+          while($donnee = $recherche->fetch())
+          {
+              echo '<option name="users" value="',$donnee['id'],'">',$donnee['pseudo'],'</option>';
+          }
+          $recherche->closeCursor();
+    }
 ?>
+
+
+
+<!-- CODE DE COTEY
+<form method="post">
+            <select name="',$idP,'">'
+              ,giveBadgeNameOptionList(),'
+              </select>
+              <a href="" target="_blank"><input  type="submit" value="Give Badge" class="giveBadge"></a>
+              <a href="" target="_blank"><input  type="submit" value="Remove Badge" class="removeBadge"></a>
+           
+          ',addBadges(),' -->

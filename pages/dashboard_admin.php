@@ -63,6 +63,10 @@
          
                 <div class="titreBox flexBoxAfficheUser">Last users <button id="boutonAfficheAllUsers">All Users</button></div>
                 <div class="boxInsideAfficheUser">
+                    <div class="flexEndAddBadges">
+                        <div><?php include('pages\addBadges.php') ?></div>
+                    </div>
+                    
                     <ul>
                     <?php
                         getAllUsers();
@@ -86,17 +90,17 @@
            
             <div class="titreBox ">BADGES USERS</div>
             <div class="boxInsideAfficheUser">
-                <table>
+                <!-- <table>
                 <tr>
                     <td>Pseudo</td>
                     <td>Badge</td>
                 </tr>
                 <tr>   
                     <?php 
-                        getAllUsersBadges();
+                        // getAllUsersBadges();
                     ?> 
                 </tr>
-                </table>    
+                </table>     -->
             </div>
         
             
