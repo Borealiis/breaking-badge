@@ -30,7 +30,7 @@ include('../components/navbar.php');
 
               <div class="flexLock"><i class="fas fa-unlock fa-9x"></i></div>
               <form action="" method="post">
-              <div><input class="sizeInput"type="text" placeholder="First Name" name="pseudo"></div>
+              <div><input class="sizeInput"type="text" placeholder="Pseudo" name="pseudo"></div>
               <div><input class="sizeInput"type="text" placeholder="Email" name="email"></div>
               <div><input class="sizeInput"type="text" placeholder="Password" name="pwd"></div>
 
