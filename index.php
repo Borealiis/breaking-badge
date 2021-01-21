@@ -30,5 +30,5 @@
 
               
   </body>
-  
+  <script src="./pages/script.js" defer></script> 
   </html>
