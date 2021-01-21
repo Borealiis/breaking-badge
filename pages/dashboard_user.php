@@ -32,46 +32,55 @@
                     <p class="title">Users</p>
                     <figure><img src="./assets/image/user.png" alt="user logos" width="40px" height="40px"></figure>
                 </div>
-                    <div class="usercard">
+                <div class="usercard">
                         <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
                         <p class="name"> Username</p>
                         <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
-                        </div>
-                    </div>
-                        <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
                         </div>
                     </div>
                     <div class="usercard">
                         <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
                         <p class="name"> Username</p>
                         <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
                         </div>
                     </div>
                     <div class="usercard">
                         <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
                         <p class="name"> Username</p>
                         <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
                         </div>
                     </div>
                     <div class="usercard">
                         <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
                         <p class="name"> Username</p>
                         <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
                         </div>
                     </div>
+                    <div class="usercard">
+                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
+                        <p class="name"> Username</p>
+                        <p class="progession">Progression:</p>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
+                        </div>
                     </div>
                     </div>
             <div class="Rankings">
@@ -79,34 +88,51 @@
                     <p class="title">Rankings</p>
                     <figure> <img src="./assets/image/ranking.png" alt="ranking logos" width="40px" height="40px"></figure>
                 </div>
+                <div class="usercard">
+                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
+                        <p class="name"> Username</p>
+                        <p class="progession">Progression:</p>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usercard">
+                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></align-self></figure>
+                        <p class="name"> Username</p>
+                        <p class="progession">Progression:</p>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usercard">
+                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
+                        <p class="name"> Username</p>
+                        <p class="progession">Progression:</p>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="usercard">
+                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
+                        <p class="name"> Username</p>
+                        <p class="progession">Progression:</p>
+                        <div class="progress">
+                            <div class="progress-done" data-done ="70">
+                            70% Completed
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progressUser">
-                        <div id="badgeProgressBar" class="progressColor">50%</div>
-                        </div>
-                    </div>
+                    
             </div>
         </section>
        
     </div>
 </main> 
-  
+

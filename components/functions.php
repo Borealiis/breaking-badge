@@ -67,7 +67,6 @@ function signin(){
   //   session_start();
   //   session_destroy();
   //   header("Location: ../index.php");
-  // } 
 
   function getBadges(){
     
@@ -82,6 +81,7 @@ function signin(){
         echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
     }
     $recherche->closeCursor();
+
   }
 
   function getUsers($pseudo){
