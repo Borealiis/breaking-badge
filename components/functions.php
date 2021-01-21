@@ -67,6 +67,7 @@ function signin(){
   //   session_start();
   //   session_destroy();
   //   header("Location: ../index.php");
+  // }
 
   function getBadges(){
     
@@ -81,6 +82,7 @@ function signin(){
         echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
     }
     $recherche->closeCursor();
+
 
   }
 
@@ -102,6 +104,24 @@ function signin(){
     $recherche->closeCursor();
     }
 
+  function displayAllUsers(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM users WHERE account_type = 'NORMIE'");
+    while($data = $recherche->fetch())
+    {
+        echo '<div class="container displayedUser">
+                <div class="usersBadgeButtons">
+                    <a href="" target="_blank"><input type="button" value="Give Badge" class="giveBadge"></a>
+                    <a href="" target="_blank"><input type="button" value="Remove Badge" class="removeBadge"></a>
+                </div>
+                <div class="picAndUsername">
+                    <p>[PICTURE]</p>
+                    <p>' . $data['pseudo'] . '</p>
+                </div>
+            </div>';
+    }
+    $recherche->closeCursor();
+    }
 
 
   function getAllUsersBadges(){
