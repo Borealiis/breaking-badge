@@ -222,6 +222,10 @@ main {
     font-size: larger;
     font-weight: bold;
 }
+.userimage{
+    width:20px;
+     height:20px;
+}
 .description{
     padding: 10px;
     font-style: italic; 
@@ -286,7 +290,7 @@ main {
     font-weight: bold;
     font-size: larger;
 }
-.progession{
+.progression{
     margin: auto;
     font-style: italic;
 }
@@ -311,7 +315,12 @@ main {
     width: 0;
     transition: 1s ease;
 }
-
+#nbuser{
+    display: none;
+}
+#pseudo{
+    display: none;
+}
 /* ___________adminDashboard_____________ */
 .headerBoxAdmin{
     display: flex;

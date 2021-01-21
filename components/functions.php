@@ -131,6 +131,20 @@ function signin(){
     }
     
   }
+  function amountOfUsers(){
+    $id = $_SESSION['user_id'];
+    $number = 0;
+    $cursor = createCursor();
+    $query = $cursor->query('SELECT id from users ');
+    while($results = $query->fetch())
+    {   
+        
+            $number++;
+            
+        }
+     echo $number;       
+    }
+    
 
   function createBadge(){
 
