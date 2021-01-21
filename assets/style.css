@@ -1,8 +1,13 @@
+html{
+    height: fit-content;
+}
 body{
     background-image: url(./image/fond0.jpg);
     background-size: cover; 
     background-repeat:no-repeat ;  
     margin: 0; 
+
+    
 
 }
 a{
@@ -161,7 +166,12 @@ a{
     justify-content: center;
     height: 90vh;
 }
-
+.middleText{
+    text-align: center;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+}
 
 /* ___________userDashboard_____________ */
 main {
@@ -351,8 +361,7 @@ main {
 
 .badgesAndUsers {
     display: flex;
-    justify-content: space-around;
-
+    /* justify-content: space-around; */
 }
 
 .sidebar {
@@ -384,8 +393,9 @@ main {
 .boxAfficheUser{
     border: aqua solid 1px;
     border-radius: 5px;  
-    width: 90%;
-    margin: 5px;
+    width: 100%;
+    /* margin: 5px; */
+    height: fit-content;
 }
 .boxAfficheImage{
     border: aqua solid 1px;
@@ -435,6 +445,10 @@ td{
     justify-content: space-around;
     font-size: xx-large;
 }
+.flexBoxAfficheUser{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* ___________NavBar_____________________ */
 .flexNav{
@@ -472,10 +486,10 @@ td{
 /* ___________All Users_____________________ */
 
 .allUsers {
-    min-width: 45%;
-    max-width: 70%;
-    margin: 0 auto;
-    height: 90vh;
+    /* min-width: 45%;
+    max-width: 70%; */
+    /* margin: 0 auto; */
+    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -483,7 +497,7 @@ td{
 
 .allUsersTitle {
     text-align: center;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .displayedUser{
@@ -566,8 +580,7 @@ td{
     display: flex;
     align-items: center;
     min-height: 65px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 5px;
+
     border-radius: 15px;
 }
 
@@ -581,4 +594,24 @@ td{
     position: absolute;
     top: 0px;
 }
+/* ______________________modal All Users____________ */
+#allUserModal{
+    height: 0px;
+    /* border-radius: 20px; */
+    /* border: inset rgb(114, 134, 134, 0.5) 3px; */
+    width: 99%;
+    opacity: 0%;
+    backdrop-filter: blur(20px);
+    transition-duration: 1s;
+    overflow: auto;
+}
+.flexBoxModal{
+    display: flex;  
+}
+.centerButModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
