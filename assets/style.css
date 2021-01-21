@@ -615,3 +615,54 @@ td{
 }
 
 
+/* ------------ START FUTURE BADGE OPTIONS ------------ */
+
+.crimsonsuccess{
+    border-color: crimson;
+    background-color:black;
+    color: white;
+}
+.cyansuccess{
+    border-color: cyan;
+    background-color:black;
+    color: white;
+}
+.deeppinksuccess{
+    border-color: deeppink;
+    background-color:black;
+    color: white;
+}
+.goldsuccess{
+    border-color: gold;
+    background-color:black;
+    color: white;
+}
+.indigosuccess{
+    border-color: indigo;
+    background-color:black;
+    color: white;
+}
+.dimgraysuccess{
+    border-color: dimgray;
+    background-color:black;
+    color: white;
+}
+
+.coppercollection{
+    background-color: #b36700;
+    color: white;
+}
+.copperoxidecollection{
+    background-color: #2a8178;
+    color: white;
+}
+.ironcollection{
+    background-color: #6a6b67;
+    color: white;
+}
+.mercurycollection{
+    background: linear-gradient(to bottom right, #474797 25%, #cfad70 75%);
+    color: white;
+}
+
+/* ------------ END  FUTURE BADGE OPTIONS ------------ */
