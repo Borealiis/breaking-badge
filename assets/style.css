@@ -207,6 +207,8 @@ main {
 }
 .username{
     margin: auto;
+    font-size: larger;
+    font-weight: bold;
 }
 .description{
     padding: 10px;
@@ -270,17 +272,32 @@ main {
 .name{
     align-self: center;
     font-weight: bold;
+    font-size: larger;
 }
 .progession{
     margin: auto;
+    font-style: italic;
 }
-.progressUser{
-    background-color: lightgrey;
-    border-radius: 5px;
-    width: 200px;
-    height: 22px;
+.progress{
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
     align-self: center;
     margin-right: auto;
+}
+.progress-done{
+    background: linear-gradient(to left, #F2709C,#FF9472);
+    box-shadow: 0 3px -5px #F2709C, 0 2px 5px #F2709C;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height: 100%;
+    width: 0;
+    transition: 1s ease;
 }
 
 /* ___________adminDashboard_____________ */
