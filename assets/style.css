@@ -5,6 +5,10 @@ body{
     margin: 0; 
 
 }
+a{
+    text-decoration: none;
+    color: aqua;
+}
 
 /*------------ START CSS BADGES ------------*/
 
@@ -175,10 +179,9 @@ main {
 .dashboardinfo{
     height: 500px;
 }
-.container.sidebar{
+.container.sidebarnotif{
     margin-top: 20px;
-    width: 450px;
-    height: 800px;
+    width: 350px;
     background-color:  rgba(182, 194, 199, 0.781);
     border: 1px solid rgba(96, 108, 148, 0.438);
     border-top-left-radius: 15px;
@@ -186,19 +189,24 @@ main {
     box-shadow: 0px 1px 4px 0px;
     text-align: center;
 }
+.badgeNotifuser{
+    font-weight: bold;
+}
 .welcome{
     background-image: linear-gradient(120deg, rgba(204, 210, 221, 0.644),rgba(105, 211, 110, 0.329));
     border: 1px solid rgba(96, 212, 50, 0.452);
     box-shadow: 0px 1px 1px 0px;
     border-radius: 10px;
-    height: 100px;
+    
     margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
+    padding: 10px;
 }
 
-.container.userHeader{
+.container.userinfo{
     margin-top: 20px;
+    width: 800px;
     height: 170px;
     background-color:  rgba(193, 200, 202, 0.781);
     border: 1px solid rgba(117, 136, 218, 0.3);
@@ -214,6 +222,8 @@ main {
 }
 .description{
     padding: 10px;
+    font-style: italic; 
+    align-self: center;
 }
 .container.Users{
     margin-top: 50px;
@@ -224,6 +234,14 @@ main {
     box-shadow: 0px 1px 4px 0px;
     margin-left: 30px;
     overflow: auto;
+}
+.userdash{
+    display: flex;
+    justify-content: center;
+}
+.ranking{
+    display: flex;
+    justify-content: center;
 }
 .Userslist{
     height: 400px;
@@ -250,6 +268,31 @@ main {
     margin-right: 5px;
     border: 1px solid rgba(117, 136, 218, 0.3);
     border-radius: 15px;
+}
+.usercard{
+    display: flex;
+    height: 70px;
+    background-color: rgba(183, 202, 209, 0.938);
+    border: 1px solid rgba(117, 136, 218, 0.3);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.name{
+    align-self: center;
+    font-weight: bold;
+}
+.progession{
+    margin: auto;
+}
+.progressUser{
+    background-color: lightgrey;
+    border-radius: 5px;
+    width: 200px;
+    height: 22px;
+    align-self: center;
+    margin-right: auto;
 }
 
 /* ___________adminDashboard_____________ */
@@ -279,6 +322,7 @@ main {
 
 .divContainerDashboard {
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .container {
@@ -334,6 +378,9 @@ main {
     background-image: url(image/admin.jpg);
     background-size: contain;
 }
+.blur{
+    backdrop-filter: blur(8px);
+}
 .titreBox{
     padding: 5px;
     background-color: rgb(183, 255, 255, 0.5);
@@ -342,11 +389,34 @@ main {
 .boxInsideAfficheUser{
     padding: 10px;
     background-color: rgba(225, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
 }
 .viewBadges{
     width: 90%;
     margin: 5px;
+}
+td{
+    border: aqua solid 1px;
+    padding: 20px;
+    margin: 5px;
+}
+.tuile{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.marqWhite{
+    background-color: rgba(225, 255, 255, 0.3);
+    padding: 2px;
+}
+.alignTextAdminBox{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    justify-content: space-around;
+    font-size: xx-large;
 }
 
 /* ___________NavBar_____________________ */
@@ -452,6 +522,7 @@ main {
     border-radius: 0 0 15px 15px;
 }
 
+
 .divBadges{
     height: 70vh;
     overflow: auto;
@@ -484,3 +555,13 @@ main {
 }
 
 /* ------------ END ALL BADGES ------------ */
+
+/* ____________________test d'animation____________ */
+.lazer{
+    width: 1px;
+    height: 100vh;
+    background-color: rgb(144, 248, 248, 0.3);
+    position: absolute;
+    top: 0px;
+}
+
