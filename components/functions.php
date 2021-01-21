@@ -73,6 +73,18 @@ function signin(){
     
   }
 
+  function getAllbadges(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM table_badges");
+    while($donnee = $recherche->fetch())
+    {
+        echo '<div class=\'badgeAndDesc\'><div class=\'badgeSolo\'><div class=\'' . $donnee['badge_color'] . ' ' . $donnee['badge_shape'] . '\'>' . $donnee['badge_content'] . '</div></div>';
+        echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
+    }
+    $recherche->closeCursor();
+
+
+  }
 
   function getUsers($pseudo){
     $cursor = createCursor();
@@ -81,6 +93,7 @@ function signin(){
     $results = $query->fetch();
           
   }  
+
   function getAllUsers(){
     $cursor = createCursor();
     $recherche = $cursor->query("SELECT * FROM users");
@@ -111,6 +124,34 @@ function signin(){
     }
 
 
+  function getAllUsersBadges(){
+    $cursor = createCursor();
+    $table = $cursor->query('SELECT pseudo,badge_name FROM users_badges INNER JOIN users ON users.id = users_badges.user_id INNER JOIN
+    table_badges ON table_badges.badge_id = users_badges.badge_id;' );
+    while($donnees = $table->fetch())
+    {   
+        echo '<td>',$donnees['pseudo'],'</td><td>',$donnees['badge_name'],'</td>';
+    }
+    $table->closeCursor();
+  }
+
+  function amountBadges(){
+    $id = $_SESSION['user_id'];
+    $number = 0;
+    $cursor = createCursor();
+    $query = $cursor->prepare('SELECT badge_id,user_id from users_badges WHERE user_id=?');
+    $query->execute([$id]);
+    while($results = $query->fetch())
+    {   
+        if($results['user_id']== $id ){
+            $number++;
+            echo $number;
+        }
+            
+    }
+    
+  }
+
   function createBadge(){
 
   }
@@ -131,4 +172,5 @@ function signin(){
   function removeBadgeFromUser($badge_id, $user_id){
     
   }
+
 ?>
