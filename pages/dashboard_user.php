@@ -1,3 +1,14 @@
+<div id="nbuser">
+<?php
+amountOfUsers();
+?>
+</div>
+<p id="pseudo">
+<?php
+$_SESSION['pseudo']; 
+echo "{$_SESSION['pseudo']}";
+?>
+</p>
 <main id="mainContainerUser">
     <section class="container sidebarnotif">
         <div class="welcome">
@@ -21,7 +32,7 @@
             <figure>
                 <img src="./assets/image/avatar.png" alt="user icon" height="70px" width="70px">
             </figure>
-            <p class="username">USERNAME</p>
+            <p class="username"><?php echo "{$_SESSION['pseudo']}"; ?></p>
             </div>
             <p class="description">32 years old, male from Paris, France. Just played Fortnite 3 hours ago.</p>
         </section>
@@ -32,103 +43,14 @@
                     <p class="title">Users</p>
                     <figure><img src="./assets/image/user.png" alt="user logos" width="40px" height="40px"></figure>
                 </div>
-                <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                </div>
             <div class="Rankings">
                 <div class="ranking">
                     <p class="title">Rankings</p>
                     <figure> <img src="./assets/image/ranking.png" alt="ranking logos" width="40px" height="40px"></figure>
                 </div>
-                <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></align-self></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-                    <div class="usercard">
-                        <figure> <img src="./assets/image/avatar.png" alt="profile picture" width="20px" height="20px"></figure>
-                        <p class="name"> Username</p>
-                        <p class="progession">Progression:</p>
-                        <div class="progress">
-                            <div class="progress-done" data-done ="70">
-                            70% Completed
-                            </div>
-                        </div>
-                    </div>
-
+  
+                    
                     
             </div>
         </section>
