@@ -67,31 +67,19 @@ function signin(){
   //   session_start();
   //   session_destroy();
   //   header("Location: ../index.php");
-  // }
+  // } 
 
-
+  function getBadges(){
+    
+  }
 
   function getAllbadges(){
     $cursor = createCursor();
     $recherche = $cursor->query("SELECT * FROM table_badges");
     while($donnee = $recherche->fetch())
     {
-        echo $donnee['badge_name'];
-    }
-    $recherche->closeCursor();
-  } 
-
-  function getBadges(){
-    
-
-  }
-
-  function getAllBadges(){
-    $cursor = createCursor();
-    $recherche = $cursor->query("SELECT * FROM table_badges");
-    while($donnee = $recherche->fetch())
-    {
-      echo $donnee['badge_name'];
+        echo '<div class=\'badgeAndDesc\'><div class=\'badgeSolo\'><div class=\'' . $donnee['badge_color'] . ' ' . $donnee['badge_shape'] . '\'>' . $donnee['badge_content'] . '</div></div>';
+        echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
     }
     $recherche->closeCursor();
   }
