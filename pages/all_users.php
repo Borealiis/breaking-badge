@@ -13,6 +13,11 @@
         <p class="container allUsersTitle">All users</p>
 
         <div class="">
+            <?php
+            include_once('../components/functions.php');
+            displayAllUsers();
+
+            ?>
 
             <div class="container displayedUser">
                 <div class="usersBadgeButtons">
