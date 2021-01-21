@@ -10,6 +10,24 @@ a{
     color: aqua;
 }
 
+input[type="button"] {
+    background: rgba(185, 239, 253, 0.7);
+    border: rgba(114, 134, 134, 0.5) 3px;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgba(114, 134, 134, 0.5);
+    padding: 7px;
+    outline: none;
+    transition-duration: 0.2s;
+}
+
+input[type="button"]:hover{
+    /*background: rgb(237, 76, 192);*/
+    background: rgba(72, 82, 144, 0.2);
+    box-shadow: 2px 2px rgba(72, 82, 144, 0.5);
+    color: whitesmoke;
+    backdrop-filter: blur(3px);
+}
+
 /*------------ START CSS BADGES ------------*/
 
     /* COLOR SUCCESS */
