@@ -128,7 +128,11 @@ function signin(){
           </div>
           <div class="picAndUsername">
           <p>[PICTURE]</p>
-          <p>',$donnee['pseudo'],'</p>
+            <div class="centerButModal container2 ">
+              <p class="centerButModal >',$donnee['pseudo'],'</p>
+              <p class="centerButModal >',$donnee['email'],'</p>
+          </div>
+          
           </div>
           </div>';
           

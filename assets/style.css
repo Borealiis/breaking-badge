@@ -261,6 +261,7 @@ main {
 }
 
 .dashboardinfo{
+    margin-top: 200px;
     height: 500px;
 }
 .container.sidebarnotif{
@@ -538,6 +539,21 @@ main {
     padding: 15px;
     justify-content: space-between;
 }
+/* .container2 {
+    background-color: rgba(117, 190, 218, 0.3);
+    margin: 5px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 0px 20px 20px 0px;
+   
+} */
+/* .picT{
+    background-image: url(../assets/image/pic.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 83px;
+    margin-top: 5px;
+} */
 
 .badgesAndUsers {
     display: flex;

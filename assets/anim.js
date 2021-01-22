@@ -57,6 +57,9 @@ boutonAfficheAllUsers.addEventListener("click", function(){
                 allUserModal.style.opacity = "100%"  
            }, 500); 
             bolModalAfficheUser = true  
+            boxAllBadges.style.height = "0px"
+            boxAllBadges.style.opacity = "0%" 
+            bolModalAfficheBadge = false 
         }
         else if(bolModalAfficheUser == true){
             allUserModal.style.height = "0px"
@@ -75,6 +78,9 @@ seeAllBadges.addEventListener("click",function(){
                 boxAllBadges.style.opacity = "100%"  
         }, 500); 
             bolModalAfficheBadge = true  
+            allUserModal.style.height = "0px"
+            allUserModal.style.opacity = "0%" 
+            bolModalAfficheUser = false 
         }
         else if(bolModalAfficheBadge == true){
             boxAllBadges.style.height = "0px"
