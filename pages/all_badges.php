@@ -9,15 +9,14 @@
     <title>All Badges</title>
 </head>
 <body> -->
-    <main class="allBadges">
-        <div class="container h2Badges"><h2>All Badges</h2></div>
+    <!-- <main class="allBadges"> -->
+        <!-- <div class="container h2Badges"><h2>All Badges</h2></div> -->
         <section class="container displayedBadges">
                 <div class="divBadges">
-                    <?php include_once('../components/functions.php'); 
-                    
+                    <?php   
                     getAllBadges(); ?>
                 </div>
         </section>
-    </main>
+    <!-- </main> -->
 <!-- </body>
 </html> -->

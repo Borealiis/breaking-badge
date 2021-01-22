@@ -50,17 +50,41 @@ const allUserModal = document.getElementById("allUserModal")
 const boutonAfficheAllUsers = document.getElementById("boutonAfficheAllUsers")
 let bolModalAfficheUser = false
 boutonAfficheAllUsers.addEventListener("click", function(){
-    console.log("test");
+
         if(bolModalAfficheUser == false){
-            allUserModal.style.height = "200px"
+            allUserModal.style.height = "500px"
             setTimeout(function(){
                 allUserModal.style.opacity = "100%"  
            }, 500); 
             bolModalAfficheUser = true  
+            boxAllBadges.style.height = "0px"
+            boxAllBadges.style.opacity = "0%" 
+            bolModalAfficheBadge = false 
         }
         else if(bolModalAfficheUser == true){
             allUserModal.style.height = "0px"
             allUserModal.style.opacity = "0%" 
             bolModalAfficheUser = false 
+        }
+})
+const seeAllBadges = document.getElementById("seeAllBadges")
+const boxAllBadges = document.getElementById("boxAllBadges")
+bolModalAfficheBadge = false;
+seeAllBadges.addEventListener("click",function(){
+
+        if(bolModalAfficheBadge == false){
+            boxAllBadges.style.height = "500px"
+            setTimeout(function(){
+                boxAllBadges.style.opacity = "100%"  
+        }, 500); 
+            bolModalAfficheBadge = true  
+            allUserModal.style.height = "0px"
+            allUserModal.style.opacity = "0%" 
+            bolModalAfficheUser = false 
+        }
+        else if(bolModalAfficheBadge == true){
+            boxAllBadges.style.height = "0px"
+            boxAllBadges.style.opacity = "0%" 
+            bolModalAfficheBadge = false 
         }
 })

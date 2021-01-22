@@ -52,7 +52,7 @@ for (i = 0; i < users.textContent; i++) {
 
         let progressionDone = document.createElement('div');
         progressionDone.classList.add("progress-done");
-        let pourcentUser = math.floor(100/amountBadgesExist.textContent)*decoupeAllBadges[i]
+        let pourcentUser = (100/amountBadgesExist.textContent)*decoupeAllBadges[i]
         progressionDone.style.width = pourcentUser + "%"
         progressionDone.style.opacity = 100%
         progress.appendChild(progressionDone);
