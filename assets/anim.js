@@ -60,6 +60,9 @@ boutonAfficheAllUsers.addEventListener("click", function(){
             boxAllBadges.style.height = "0px"
             boxAllBadges.style.opacity = "0%" 
             bolModalAfficheBadge = false 
+            badge_manager.style.height = "0px"
+            badge_manager.style.opacity = "0%" 
+            bolBadgeManage = false 
         }
         else if(bolModalAfficheUser == true){
             allUserModal.style.height = "0px"
@@ -81,6 +84,9 @@ seeAllBadges.addEventListener("click",function(){
             allUserModal.style.height = "0px"
             allUserModal.style.opacity = "0%" 
             bolModalAfficheUser = false 
+            badge_manager.style.height = "0px"
+            badge_manager.style.opacity = "0%" 
+            bolBadgeManage = false 
         }
         else if(bolModalAfficheBadge == true){
             boxAllBadges.style.height = "0px"
@@ -88,3 +94,29 @@ seeAllBadges.addEventListener("click",function(){
             bolModalAfficheBadge = false 
         }
 })
+const addBadge = document.getElementById("addBadge")
+const badge_manager = document.getElementById("badge_manager")
+bolBadgeManage = false
+addBadge.addEventListener("click",function(){
+
+    if(bolBadgeManage == false){
+        badge_manager.style.height = "500px"
+        setTimeout(function(){
+            badge_manager.style.opacity = "100%"  
+    }, 500); 
+        bolBadgeManage = true  
+        allUserModal.style.height = "0px"
+        allUserModal.style.opacity = "0%" 
+        bolModalAfficheUser = false 
+        boxAllBadges.style.height = "0px"
+        boxAllBadges.style.opacity = "0%" 
+        bolModalAfficheBadge = false 
+    }
+    else if(bolBadgeManage == true){
+        badge_manager.style.height = "0px"
+        badge_manager.style.opacity = "0%" 
+        bolBadgeManage = false 
+    }
+})
+
+

@@ -19,9 +19,10 @@ const decoupeAllBadges = AmountAllBadgesOfAllUSers.textContent.split(",")
 
 const amountBadgesExit = document.getElementById("amountBadgesExit")
 
-console.log(allUsersNames.textContent);
 
-console.log(decoupeNames);
+
+
+
 
 for (i = 0; i < users.textContent; i++) {
 
