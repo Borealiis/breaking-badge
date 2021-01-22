@@ -23,10 +23,10 @@ AS a part of our becode training, We have been asked to create a plateform with 
 
 #Here are the main instructions given:
 
->Create a fullstack application
->Create a relational database, with many-to-many relationships
->Split the logic of your app using a view-controller approach
->Design a basic permission system
+>* Create a fullstack application
+>* Create a relational database, with many-to-many relationships
+>* Split the logic of your app using a view-controller approach
+>* Design a basic permission system
 
 
 
