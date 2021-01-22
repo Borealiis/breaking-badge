@@ -25,9 +25,7 @@
             <!--TODO: (aurore) progression using js or php-->
             <div class="notes">
                 <p>Notes:</p>
-                <div class="notecontent">
-
-                </div>
+                <textarea name="" class="notecontent" cols="30" rows="10"></textarea>
         
             </div>
         </div>
@@ -62,10 +60,10 @@
             <!-- <a href="" target="_blank"><input type="button" value="All users" class="seeAllUsers"></a> -->
                 <div class="boxAfficheUser">
          
-                <div class="titreBox flexBoxAfficheUser">Last users <button id="boutonAfficheAllUsers">All Users</button></div>
+                <div class="titreBox flexBoxAfficheUser"><input type="button" class="seeAllBadges" value="All Users" id="boutonAfficheAllUsers"></input><div><?php include('pages/addBadges.php') ?></div> </div>
                 <div class="boxInsideAfficheUser">
                     <div class="flexEndAddBadges">
-                        <div><?php include('pages/addBadges.php') ?></div>
+                        
                     </div>
                     
                     <ul>
@@ -74,16 +72,19 @@
                     ?>
                     </li>   
                     </ul>
-                </div>   
+                </div>  
                 <div class="viewBadges">
                     </div><div id="allUserModal"><?php include('pages/all_users.php') ?></div>
-                    <a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a>
-                    <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a>
+                    
+                    
                     
                     <div class="recentBadges">
                         
                         <p class="subtitle">Last badges</p>
                     </div>
+                    <div class="titreBox flexBoxAfficheUser"><div><a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a></div> <div>
+                    <!-- <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a> -->
+                </div></div> 
                 </div>
             </section>
             
