@@ -135,7 +135,7 @@ function signin(){
     $id = $_SESSION['user_id'];
     $number = 0;
     $cursor = createCursor();
-    $query = $cursor->query('SELECT id from users ');
+    $query = $cursor->query('SELECT id from users WHERE account_type = "NORMIE" ');
     while($results = $query->fetch())
     {   
         
@@ -146,6 +146,12 @@ function signin(){
     }
     
 
+  function progressionPoucentage(){
+    // 100* /amountBadges()
+
+   //pourcentage = 100 x Valeur partielle / Valeur totale
+    
+  }
   function createBadge(){
 
   }
@@ -157,6 +163,7 @@ function signin(){
   function removeBadge($badge_id){
 
   }
+  
 
   function grantBadgeToUser($badge_id, $user_id){
     $cursor = createCursor();
