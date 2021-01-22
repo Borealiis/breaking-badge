@@ -652,7 +652,7 @@ td{
     background-color: #b36700;
     color: white;
 }
-.copperoxidecollection{
+.copperoxicollection{
     background-color: #2a8178;
     color: white;
 }
@@ -665,4 +665,17 @@ td{
     color: white;
 }
 
-/* ------------ END  FUTURE BADGE OPTIONS ------------ */
+/* ------------ END FUTURE BADGE OPTIONS ------------ */
+
+/* ------------ START FORM BADGE CREATION ------------ */
+
+.displayedCreation{
+    display: flex;
+    flex-direction: column;
+}
+
+.submittedCreation{
+    width: 200px; 
+}
+
+/* ------------ END FORM BADGE CREATION ------------ */
