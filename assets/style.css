@@ -20,8 +20,19 @@ a{
     text-shadow: 1.5px 1.5px rgb(205,110,198);
     text-align: center;
 }
+p{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+div{
+    font-family: 'Chakra Petch', sans-serif;
+}
 
 /* ___________Inputs_______________ */
+input {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
 input[type="text"] {
     border-radius: 8px;
     padding: 0 7px 0 7px;
@@ -625,6 +636,7 @@ td{
     justify-content: space-between;
 }
 .centerV{
+    font-family: 'Bai Jamjuree', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
