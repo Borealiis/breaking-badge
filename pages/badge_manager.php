@@ -1,17 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../assets/style.css">
-    <title>Create new badge</title>
-</head>
-<body>
-    <main class="allBadges">
+
+  
     <?php
-        include_once('../components/functions.php');
+
         if(isset($_POST['badge_tag']) && isset($_POST['badge_color']) && isset($_POST['badge_name']) && isset($_POST['badge_desc']) && isset($_POST['badge_content'])){
             createBadge();
         }
@@ -76,6 +66,4 @@
                 </form>
         </section>
         <script type="text/javascript" src="../assets/badge_manager.js"></script>
-    </main>
-</body>
-</html>
+

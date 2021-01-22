@@ -80,9 +80,10 @@
                     </div>
 
                     <div class="titreBox flexBoxAfficheUser"><div><input type="button" value="All Badges" class="seeAllBadges" id="seeAllBadges"></div> <div>
-                    <!-- <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a> -->
+                    <a><input type="button" value="New Badge" class="addBadge" id="addBadge"></a>
                 </div></div> 
                 <div class="boxAllBadges" id="boxAllBadges"><?php include('pages/all_badges.php') ?></div>
+                <div id="badge_manager" class="badge_manager"><?php include('pages/badge_manager.php') ?></div>
 
                 </div>
             </section>
