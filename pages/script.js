@@ -1,6 +1,7 @@
 const usersLIist = document.querySelector('.Userslist');
 const users = document.getElementById('nbuser');
 const username = document.getElementById('pseudo');
+const poucrentage = document.getElementById('pourcentage') //le textcontent de pourcentage doit etre entrée à la ligne 37 à la place de 50
 
 
 for (i = 0; i < users.textContent; i++) {
@@ -33,8 +34,8 @@ for (i = 0; i < users.textContent; i++) {
 
         let progressionDone = document.createElement('div');
         progressionDone.className ='progress-done';
-        progressionDone.setAttribute("data-done", "70");
-        progressionDone.textContent = "70% completed";
+        progressionDone.setAttribute("data-done", "50");
+        progressionDone.textContent = poucrentage.textContent +="%completed";
         progress.appendChild(progressionDone);
     
     

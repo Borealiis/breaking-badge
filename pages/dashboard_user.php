@@ -8,17 +8,33 @@ amountOfUsers();
 $_SESSION['pseudo']; 
 echo "{$_SESSION['pseudo']}";
 ?>
+<div id="pourcentage">
+    50
+    <!--
+        <?php 
+        //progressionPoucentage();
+        ?>
+    -->
+</div>
 </p>
 <main id="mainContainerUser">
     <section class="container sidebarnotif">
         <div class="welcome">
-            <p class="message">Welcome, to our plateform [USER]! <br> <br> We are happy to count you as a new member of
+            <p class="message">Welcome, to our plateform <?php echo "{$_SESSION['pseudo']}"; ?>! <br> <br> We are happy to count you as a new member of
             our community.<br></p>
 
         </div>
         <div class="sidebarBadgeInfo">
             <div class="badgeNotifuser">
-                <p>Congratulations!, you have reached the Bronze level, a new badge has now been assigned to you!</p>
+                <div class="bell">
+                <figure class="imagebell">
+                <img src="./assets/image/bell.png" alt="user icon" height="35px" width="35px">
+                <p class="notifmsg">Notifications:</p>
+                </figure>
+                </div>
+                <div class="messagebox">
+                <p class="messagenotif">Congratulations, you have reached the Bronze level! </br></br>A new badge has now been assigned to you!</p>
+                </div>
             </div>
             <div class="myBadges"></div>
             <div class="badgesToGet"></div>
@@ -41,13 +57,13 @@ echo "{$_SESSION['pseudo']}";
                 <div class="Userslist">
                 <div class="userdash">
                     <p class="title">Users</p>
-                    <figure><img src="./assets/image/user.png" alt="user logos" width="40px" height="40px"></figure>
+                    <figure><img src="./assets/image/user.png" alt="user logos" width="30px" height="30px"></figure>
                 </div>
                 </div>
             <div class="Rankings">
                 <div class="ranking">
                     <p class="title">Rankings</p>
-                    <figure> <img src="./assets/image/ranking.png" alt="ranking logos" width="40px" height="40px"></figure>
+                    <figure> <img src="./assets/image/ranking.png" alt="ranking logos" width="30px" height="30px"></figure>
                 </div>
   
                     
