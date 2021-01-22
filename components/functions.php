@@ -276,7 +276,7 @@ function signin(){
           $recherche->closeCursor();
     }
 function amountAllBadgesOfAllUSers(){     
-  for($i = 1; $i <= amountOfUsers2();$i++){
+  for($i = 2; $i <= amountOfUsers2();$i++){
       $cursor = createCursor();
       $query = $cursor->prepare(' SELECT COUNT(badge_id) as badges FROM users_badges WHERE user_id=? ');
       $query->execute([$i]);
