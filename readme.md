@@ -1,3 +1,7 @@
+# Breaking Badge
+> This project was published on  the 22nd of January 2021
+>
+
 # Table of Content
 * [Team](#Team)
 * [Introduction](#Introduction)
@@ -67,8 +71,9 @@ Here is an image of the database architecture.
 # Improvements
 We wish to improve:
 
-* responsiveness
-* use of /includes missing functions
+* Responsiveness
+* Use of /includes missing functions
+* Display badges in the user interface
  
 # Contributing
 Pull requests are mandatory. Our team was asked to make commits and pull request often to keep track of everybody's work.
@@ -82,9 +87,13 @@ Please make sure to update tests as appropriate.
                                                     (User page)
                                 
 ![image](./assets/image/user_page.png)
-                                                  (Admin page)
+
+
+                                                    (Admin page)
                                 
 ![image](./assets/image/admin_page.png)
+
+
 
 
 
