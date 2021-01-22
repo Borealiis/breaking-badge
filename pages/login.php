@@ -14,7 +14,9 @@ if(!empty($_POST['email'])){
               <form action="" method="post">
               <div><input class="sizeInput"type="text" placeholder="Email" name="email"></div>
               <div><input class="sizeInput"type="text" placeholder="Password" name="pwd"></div>
-              <div><input class="sizeInput"type="submit" value="Submit"></div>
+              <div><input class="sizeInput"type="submit" value="Submit">
+            </div>
+
 
             
           </form>
