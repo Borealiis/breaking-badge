@@ -4,7 +4,7 @@
 </select>
 <select name="users"><?php giveUserOptionList(); ?>
 </select>
-<input type="submit" value="addBadge">
+<input type="submit" value="Add Badge">
 </form>
 <?php  
       $cursor = createCursor();
