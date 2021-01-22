@@ -5,6 +5,8 @@
 * [Setup](#setup)
 * [Improvements](#Improvements)
 * [Contributing](#Contruting)
+* [Web page overview](#preview)
+Web page overview
 
 
 # Team
@@ -57,9 +59,9 @@ We used [Trello](https://trello.com/b/jNzWNQ78/breaking-badge) to keep track of 
 
 ### Design
 Our website designed with a pprototype that We made with Figma.
-![image](./asset/images/figma_design1.png)
+![image](./assets/image/figma_design1.png)
 Here is an image of the database architecture.
-![image](./asset/images/architecture.png)
+![image](./assets/image/architecture.png)
 
 
 # Improvements
@@ -71,6 +73,20 @@ We wish to improve:
 # Contributing
 Pull requests are mandatory. Our team was asked to make commits and pull request often to keep track of everybody's work.
 Please make sure to update tests as appropriate.
+
+# Web page overview
+                                                   (Loading page)
+                                
+![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/loading_page.png)
+
+                                                    (User page)
+                                
+![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/user_page.png)
+                                                  (Admin page)
+                                
+![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/admin_page.png)
+
+
 
 
 ## Disclaimer
