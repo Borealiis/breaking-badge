@@ -45,8 +45,8 @@
             <div class="columnHeaderBoxAdmin boxAfficheUser blur marginTop">
                 <div class="titreBox">Profile</div > 
                 <div class="alignTextAdminBox" >
-                    <div><?php echo $_SESSION['pseudo']; ?></div>
-                    <div><?php echo $_SESSION['email']; ?></div>
+                    <div class="profileName"><?php echo $_SESSION['pseudo']; ?></div>
+                    <div class="profileEmail"><?php echo $_SESSION['email']; ?></div>
                 </div>
 
     
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="titreBox flexBoxAfficheUser"><div><input type="button" value="All Badges" class="seeAllBadges" id="seeAllBadges"></div> <div>
-                    <!-- <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a> -->
+                     <a href="" target="_blank"><input type="button" value=" + " class="addBadge"></a>
                 </div></div> 
                 <div class="boxAllBadges" id="boxAllBadges"><?php include('pages/all_badges.php') ?></div>
 
@@ -89,8 +89,10 @@
             
             <section class="container otherUsersDo ">
            
-            <div class="titreBox ">BADGES USERS</div>
+            <div class="titreBox ">Credits</div>
             <div class="boxInsideAfficheUser">
+                <p>A project made by the best team:</p>
+                <p>Audrey, Aurore, Florian, Richard</p>
                 <!-- <table>
                 <tr>
                     <td>Pseudo</td>
@@ -105,7 +107,7 @@
             </div>
         
             
-        </section>
+            </section>
     </div>
     </div>
 </main>
