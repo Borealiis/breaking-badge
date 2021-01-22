@@ -45,7 +45,7 @@ function signin(){
   $recherche = $cursor->query("SELECT * FROM users");
       while($donnee = $recherche->fetch()){
           if($donnee['email'] === $_POST['email']){
-              echo '<div class="middleText flexLogPage">','L',"'",'email ',$donnee['email'];
+              echo '<div class="middleText">','L',"'",'email ',$donnee['email'];
               echo ' existe déjà !</div>';
               $recherche->closeCursor();
               $noExist = true;
@@ -57,7 +57,8 @@ function signin(){
           $pseudo = $_POST['pseudo'];
           $hachachePWD = password_hash("$pass",PASSWORD_DEFAULT);
           $addUser = $cursor->prepare("INSERT INTO users (email,password,pseudo,account_type) VALUES (?,?,?,?)"); 
-          $addUser->execute(array($email,$hachachePWD,$pseudo,"NORMIE")); 
+          $addUser->execute(array($email,$hachachePWD,$pseudo,"NORMIE"));
+          header("Location: ../index.php");
           echo '<div class="middleText" >Vous êtes inscrit !</div>';
           $recherche->closeCursor();
       } 
