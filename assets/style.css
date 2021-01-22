@@ -34,12 +34,13 @@ input {
 }
 
 input[type="text"] {
+    background: whitesmoke;
     border-radius: 8px;
     padding: 0 7px 0 7px;
     outline: none;
 }
 
-input[type="button"], input[type="submit"] {
+input[type="button"], input[type="submit"], button, select {
     background: rgba(185, 239, 253, 0.7);
     border: rgba(114, 134, 134, 0.5) 3px;
     border-radius: 8px;
@@ -49,7 +50,7 @@ input[type="button"], input[type="submit"] {
     transition-duration: 0.2s;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
     /*background: rgb(237, 76, 192);*/
     background: rgba(72, 82, 144, 0.2);
     box-shadow: 2px 2px rgba(72, 82, 144, 0.5);
@@ -57,6 +58,17 @@ input[type="button"]:hover, input[type="submit"]:hover {
     backdrop-filter: blur(3px);
 }
 
+option {
+    background: rgb(211, 240, 248);
+}
+
+textarea {
+    backgound: whitesmoke;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 8px;
+    padding: 0 7px 0 7px;
+    outline: none;
+}
 /* ___________Scrollbar_____________ */
 
 ::-webkit-scrollbar{
