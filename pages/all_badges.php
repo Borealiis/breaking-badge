@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <title>All Badges</title>
 </head>
-<body>
+<body> -->
     <main class="allBadges">
         <div class="container h2Badges"><h2>All Badges</h2></div>
         <section class="container displayedBadges">
@@ -19,5 +19,5 @@
                 </div>
         </section>
     </main>
-</body>
-</html>
+<!-- </body>
+</html> -->
