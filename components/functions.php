@@ -196,7 +196,27 @@ function signin(){
   }
 
   function createBadge(){
+    $cursor = createCursor();
+    $createBadge = $cursor->prepare("INSERT INTO table_badges (badge_id, badge_name, badge_desc, badge_color, badge_shape, badge_tag, badge_content) 
+    VALUES (?,?,?,?,?,?,?)"); 
+    $badge_id = 'NULL';
+    $badge_name = $_POST['badge_name'];
+    $badge_desc = $_POST['badge_desc'];
+    $badge_color = $_POST['badge_color'];
+    $badge_tag = $_POST['badge_tag'];
+    if($badge_tag == 'success'){
+      $badge_shape = 'ring';
+    }
+    else if($badge_tag == 'collection'){
+      $badge_shape = 'elem';
+    }
+    else if($badge_tag == 'admin'){
+      $badge_shape = 'stars';
+    }
+    $badge_content = $_POST['badge_content'];
 
+    $createBadge->execute(array($badge_id,$badge_name,$badge_desc,$badge_color,$badge_shape,$badge_tag,$badge_content));
+    $createBadge->closeCursor();
   }
 
   function editBadge($badge_id){

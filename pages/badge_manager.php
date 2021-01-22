@@ -12,7 +12,7 @@
     <main class="allBadges">
         <div class="container h2Badges"><h2>New badge creation</h2></div>
         <section class="container displayedBadges">
-                <form action="" class="displayedCreation">
+                <form action="" method="post" class="displayedCreation">
                     <div>
                         <label for="cat-badge">Choose a badge category and skin:</label>
                         <select name="badge_tag" id="cat-badge">
