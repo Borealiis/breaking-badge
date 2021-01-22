@@ -23,11 +23,12 @@
             </div>
 
             <!--TODO: (aurore) progression using js or php-->
-            <div class="myBadgesProgress">
-                <p>Badge progress: </p>
-                <div class="progressBackground">
-                    <div id="badgeProgressBar" class="progressColor">50%</div>
+            <div class="notes">
+                <p>Notes:</p>
+                <div class="notecontent">
+
                 </div>
+        
             </div>
         </div>
     </section>

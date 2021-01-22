@@ -12,7 +12,7 @@ $_SESSION['pseudo'];
 echo "{$_SESSION['pseudo']}";
 ?>
 <div id="pourcentage">
-    50
+    1
     <!--
         <?php 
         //progressionPoucentage();
@@ -35,7 +35,7 @@ echo "{$_SESSION['pseudo']}";
                 </figure>
                 </div>
                 <div class="messagebox">
-                <p class="messagenotif">Congratulations, you have reached the Bronze level! </br></br>A new badge has now been assigned to you!</p>
+                <p class="messagenotif">Congratulations, you have reached the "newbie" level! </br></br>A new badge has now been assigned to you!</p>
                 </div>
             </div>
             <div class="myBadges"></div>

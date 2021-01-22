@@ -3,6 +3,13 @@ const users = document.getElementById('nbuser');
 const username = document.getElementById('pseudo');
 const poucrentage = document.getElementById('pourcentage') //le textcontent de pourcentage doit etre entrée à la ligne 37 à la place de 50
 
+const note = document.querySelector('.notecontent');
+
+note.addEventListener('keyup', (e) =>{
+
+    let {value} = e.target
+    note.innerHTML = value
+}) 
 const allUsersNames = document.getElementById("allUsersNames")
 const decoupeNames = allUsersNames.textContent.split(",")
 
@@ -53,6 +60,7 @@ for (i = 0; i < users.textContent; i++) {
         let progressionDone = document.createElement('div');
         progressionDone.classList.add("progress-done");
         let pourcentUser = (100/amountBadgesExist.textContent)*decoupeAllBadges[i]
+        progressionDone.textContent = poucrentage.textContent +="%";
         progressionDone.style.width = pourcentUser + "%"
         progressionDone.style.opacity = 100%
         progress.appendChild(progressionDone);
@@ -68,3 +76,4 @@ setTimeout(() => {
     progress.style.width = progress.getAttribute('data-done') + '%';
     progress.style.opacity = 1;
 }, 500)
+
