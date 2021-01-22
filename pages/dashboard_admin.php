@@ -23,11 +23,10 @@
             </div>
 
             <!--TODO: (aurore) progression using js or php-->
-            <div class="myBadgesProgress">
-                <p>Badge progress: </p>
-                <div class="progressBackground">
-                    <div id="badgeProgressBar" class="progressColor">50%</div>
-                </div>
+            <div class="notes">
+                <p>Notes:</p>
+                <textarea name="" class="notecontent" cols="30" rows="10"></textarea>
+        
             </div>
         </div>
     </section>
@@ -62,12 +61,14 @@
                 <div class="boxAfficheUser">
          
                 <div class="titreBox flexBoxAfficheUser"><input type="button" class="seeAllBadges" value="All Users" id="boutonAfficheAllUsers"></input><div><?php include('pages/addBadges.php') ?></div> </div>
+
                 <!-- <div class="boxInsideAfficheUser">
                     <div class="flexEndAddBadges">
                         
                     </div>
                 
                 </div>   -->
+
                 <div class="viewBadges">
                     </div><div id="allUserModal"><?php include('pages/all_users.php') ?></div>
                     
@@ -77,10 +78,12 @@
                         
                         <!-- <p class="subtitle">Last badges</p> -->
                     </div>
+
                     <div class="titreBox flexBoxAfficheUser"><div><input type="button" value="All Badges" class="seeAllBadges" id="seeAllBadges"></div> <div>
                     <!-- <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a> -->
                 </div></div> 
                 <div class="boxAllBadges" id="boxAllBadges"><?php include('pages/all_badges.php') ?></div>
+
                 </div>
             </section>
             
