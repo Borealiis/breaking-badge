@@ -25,7 +25,7 @@
             <!--TODO: (aurore) progression using js or php-->
             <div class="notes">
                 <p>Notes:</p>
-                <textarea name="" class="notecontent" cols="30" rows="10"></textarea>
+                <textarea name="" class="notecontent" cols="30" rows="10" ></textarea>
         
             </div>
         </div>
