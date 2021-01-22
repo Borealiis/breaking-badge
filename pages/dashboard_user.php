@@ -3,6 +3,9 @@
 amountOfUsers();
 ?>
 </div>
+<div id="allUsersNames"><?php displayAllUsersUserPages() ?></div>
+<div id="AmountAllBadgesOfAllUSers"><?php AmountAllBadgesOfAllUSers() ?></div>
+<div id="amountBadgesExist"><?php amountBadgesExit() ?></div>
 <p id="pseudo">
 <?php
 $_SESSION['pseudo']; 
@@ -22,7 +25,6 @@ echo "{$_SESSION['pseudo']}";
         <div class="welcome">
             <p class="message">Welcome, to our plateform <?php echo "{$_SESSION['pseudo']}"; ?>! <br> <br> We are happy to count you as a new member of
             our community.<br></p>
-
         </div>
         <div class="sidebarBadgeInfo">
             <div class="badgeNotifuser">
@@ -73,4 +75,5 @@ echo "{$_SESSION['pseudo']}";
        
     </div>
 </main> 
+<script src="assets\anim.js"></script>
 

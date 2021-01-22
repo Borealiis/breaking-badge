@@ -5,7 +5,6 @@ include_once('db.php');
   // Similar to "include_once" but for sessions
   // Calls "session_start()" unless it has already been called on the page
 
-
   function session_start_once(){
     if(session_status() == PHP_SESSION_NONE){
       return session_start();
@@ -160,6 +159,14 @@ function signin(){
     }
     $recherche->closeCursor();
     }
+    function displayAllUsersUserPages(){
+      $cursor = createCursor();
+      $recherche = $cursor->query("SELECT * FROM users WHERE account_type = 'NORMIE'");
+      while($data = $recherche->fetch())
+      {
+        echo $data['pseudo'],',';
+      } 
+    }
 
 
   
@@ -201,8 +208,24 @@ function signin(){
             $number++;
             
         }
-     echo $number;       
+     echo $number;    
+     return $number;   
     }
+    function amountOfUsers2(){
+      $id = $_SESSION['user_id'];
+      $number = 0;
+      $cursor = createCursor();
+      $query = $cursor->query('SELECT id from users WHERE account_type = "NORMIE" ');
+      while($results = $query->fetch())
+      {   
+          
+              $number++;
+              
+          }
+   
+       return $number;   
+      }
+      
     
 
   function progressionPoucentage(){
@@ -252,7 +275,27 @@ function signin(){
           }
           $recherche->closeCursor();
     }
+function amountAllBadgesOfAllUSers(){     
+  for($i = 1; $i <= amountOfUsers2();$i++){
+      $cursor = createCursor();
+      $query = $cursor->prepare(' SELECT COUNT(badge_id) as badges FROM users_badges WHERE user_id=? ');
+      $query->execute([$i]);
+      while($donnees = $query->fetch())
+      {
+        echo $donnees['badges'],",";
+      }
+     }
+}
+
+function amountBadgesExit(){
+  $cursor = createCursor();
+  $query = $cursor->query(' SELECT COUNT(badge_id) as badges FROM table_badges');
+  while($donnee = $query->fetch())
+
+  echo $donnee['badges'];
+}
 ?>
+
 
 
 
