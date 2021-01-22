@@ -3,7 +3,26 @@ const users = document.getElementById('nbuser');
 const username = document.getElementById('pseudo');
 const poucrentage = document.getElementById('pourcentage') //le textcontent de pourcentage doit etre entrée à la ligne 37 à la place de 50
 
+const allUsersNames = document.getElementById("allUsersNames")
+const decoupeNames = allUsersNames.textContent.split(",")
+
+// let progresDone = document.querySelector(".progress-done")
+
+const amountBadgesExist = document.getElementById("amountBadgesExist")
+console.log(amountBadgesExist.textContent);
+
+const AmountAllBadgesOfAllUSers = document.getElementById("AmountAllBadgesOfAllUSers")
+const decoupeAllBadges = AmountAllBadgesOfAllUSers.textContent.split(",")
+
+
+const amountBadgesExit = document.getElementById("amountBadgesExit")
+
+console.log(allUsersNames.textContent);
+
+console.log(decoupeNames);
+
 for (i = 0; i < users.textContent; i++) {
+
     let userCard = document.createElement('div');
     userCard.className = 'usercard';
     userCard.id = i;
@@ -19,7 +38,7 @@ for (i = 0; i < users.textContent; i++) {
 
         let name = document.createElement('p');
         name.className ='name';
-        name.textContent = pseudo.textContent;
+        name.textContent = decoupeNames[i];
         userCard.appendChild(name);
 
         let progression = document.createElement('p');
@@ -32,9 +51,10 @@ for (i = 0; i < users.textContent; i++) {
         userCard.appendChild(progress);
 
         let progressionDone = document.createElement('div');
-        progressionDone.className ='progress-done';
-        progressionDone.setAttribute("data-done", "50");
-        progressionDone.textContent = poucrentage.textContent +="%completed";
+        progressionDone.classList.add("progress-done");
+        let pourcentUser = (100/amountBadgesExist.textContent)*decoupeAllBadges[i]
+        progressionDone.style.width = pourcentUser + "%"
+        progressionDone.style.opacity = 100%
         progress.appendChild(progressionDone);
     
 }

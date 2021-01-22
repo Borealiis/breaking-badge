@@ -1,4 +1,6 @@
 const body = document.body
+
+
 const lazer = document.createElement("div")
 lazer.classList.add("lazer")
 body.appendChild(lazer)
@@ -13,13 +15,36 @@ setInterval(function(){
 let renvoi = 0;
 setInterval(function(){
     renvoi++
-    if(renvoi == 3){
+    if(renvoi == 6){
         lazer.style.display ="block"
+      
+            setTimeout(function(){
+                body.classList.add("blurBack")
+                body.classList.add("hueRotate")
+             }, 100);
+             setTimeout(function(){
+                body.classList.remove("blurBack");
+                body.classList.remove("hueRotate");
+             }, 200);
+             setTimeout(function(){
+                body.classList.add("blurBack")
+                body.classList.add("brightnessDrop")
+             }, 300);
+             setTimeout(function(){
+                body.classList.remove("blurBack");
+                body.classList.remove("brightnessDrop");
+             }, 400);
+             setTimeout(function(){
+                body.classList.add("blurBack")
+             }, 490);
+             setTimeout(function(){
+                body.classList.remove("blurBack");
+             }, 550);
         renvoi=0
     }else{
         lazer.style.display ="none"
+        body.classList.remove("blurBack");
     }
-    // console.log(renvoi);
 }, 1000);
 const allUserModal = document.getElementById("allUserModal")
 const boutonAfficheAllUsers = document.getElementById("boutonAfficheAllUsers")
