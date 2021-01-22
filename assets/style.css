@@ -480,6 +480,41 @@ main {
     width: 100%;
     transition: 1s ease;
 }
+.notes{
+    background: linear-gradient(to left, rgba(105, 163, 163, 0.438),rgba(94, 120, 175, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 100px;
+    padding-top: 10px;
+    min-height: 120px;
+    border-bottom: 1px solid rgba(117, 190, 218, 0.3);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1px;
+}
+.notecontent{
+    background: linear-gradient(to left, rgba(105, 163, 163, 0.438),rgba(94, 120, 175, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    min-height: 120px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding-top: 1px;
+}
+.notes:hover{
+    color: black;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
+}
+.notecontent:hover{
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
+    color: black;
+}
 #nbuser{
     display: none;
 }
@@ -629,8 +664,6 @@ td{
     display: flex;
     justify-content: flex-end;
 }
-
-
 /* ___________NavBar_____________________ */
 .flexNav{
     display: flex;
