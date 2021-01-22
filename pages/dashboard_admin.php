@@ -25,7 +25,7 @@
             <!--TODO: (aurore) progression using js or php-->
             <div class="notes">
                 <p>Notes:</p>
-                <textarea name="" class="notecontent" cols="30" rows="10"></textarea>
+                <textarea name="" class="notecontent" cols="30" rows="10" ></textarea>
         
             </div>
         </div>
@@ -80,9 +80,12 @@
                     </div>
 
                     <div class="titreBox flexBoxAfficheUser"><div><input type="button" value="All Badges" class="seeAllBadges" id="seeAllBadges"></div> <div>
-                     <a href="" target="_blank"><input type="button" value=" + " class="addBadge"></a>
+
+                    <a><input type="button" value="New Badge" class="addBadge" id="addBadge"></a>
+
                 </div></div> 
                 <div class="boxAllBadges" id="boxAllBadges"><?php include('pages/all_badges.php') ?></div>
+                <div id="badge_manager" class="badge_manager"><?php include('pages/badge_manager.php') ?></div>
 
                 </div>
             </section>

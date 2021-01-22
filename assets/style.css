@@ -496,9 +496,9 @@ main {
     background: linear-gradient(to left, rgba(105, 163, 163, 0.438),rgba(94, 120, 175, 0.719));
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     padding-top: 10px;
-    min-height: 120px;
+    min-height: 0px;
     border-bottom: 1px solid rgba(117, 190, 218, 0.3);
     border-radius: 10px 10px 15px 15px;
     box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
@@ -506,6 +506,7 @@ main {
     text-align: center;
     font-weight: bold;
     padding-top: 1px;
+    height: fit-content;
 }
 .notecontent{
     background: linear-gradient(to left, rgba(105, 163, 163, 0.438),rgba(94, 120, 175, 0.719));
@@ -513,11 +514,13 @@ main {
     margin-right: 5px;
     padding-top: 10px;
     margin-bottom: 5px;
-    min-height: 120px;
+    min-height: 30px;
     border: none;
     color: white;
     font-weight: bold;
     padding-top: 1px;
+    height: 65px;
+    min-width: 100px;
 }
 .notes:hover{
     color: black;
@@ -546,6 +549,7 @@ main {
     display: none;
 }
 /* ___________adminDashboard_____________ */
+
 .marginTop{
     margin-top: 5px;
     margin-right: 5px;
@@ -877,6 +881,14 @@ td{
 }
 /* ______________________modal All Badges____________ */
 .boxAllBadges{
+    height: 0px;
+    width: 99%;
+    opacity: 0%;
+    backdrop-filter: blur(20px);
+    transition-duration: 1s;
+    overflow: auto;
+}
+.badge_manager{
     height: 0px;
     width: 99%;
     opacity: 0%;
