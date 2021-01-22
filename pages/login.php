@@ -3,7 +3,7 @@ if(!empty($_POST['email'])){
     if(login($_POST['email'], $_POST['pwd'])){
         header('location: index.php ');
     }else{
-        echo '<div>Vous pouvez vous inscrire a la page <a href="pages\signin.php" >ici</a></div>';
+        echo '<div class="middleText">Identifiant inconnu, vous pouvez vous inscrire <a href="pages\signin.php" >ici</a></div>';
     }
 }    
 

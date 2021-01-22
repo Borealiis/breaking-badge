@@ -34,7 +34,7 @@ include('../components/navbar.php');
               <div><input class="sizeInput"type="text" placeholder="Email" name="email"></div>
               <div><input class="sizeInput"type="password" placeholder="Password" name="pwd"></div>
 
-              <div><input class="sizeInput"type="submit" value="sign in"></div>
+              <div><input class="sizeInput"type="submit" value="Sign In"></div>
           </form>
       </div>
   </div>
