@@ -46,7 +46,7 @@ function signin(){
   $recherche = $cursor->query("SELECT * FROM users");
       while($donnee = $recherche->fetch()){
           if($donnee['email'] === $_POST['email']){
-              echo '<div class="middleText">','L',"'",'email ',$donnee['email'];
+              echo '<div class="middleText flexLogPage">','L',"'",'email ',$donnee['email'];
               echo ' existe déjà !</div>';
               $recherche->closeCursor();
               $noExist = true;
@@ -57,7 +57,7 @@ function signin(){
           $pass = $_POST['pwd'];
           $pseudo = $_POST['pseudo'];
           $hachachePWD = password_hash("$pass",PASSWORD_DEFAULT);
-          $addUser = $cursor->prepare("INSERT INTO users (email,password,pseudo,account_type) VALUES (?,?,?,?,?)"); 
+          $addUser = $cursor->prepare("INSERT INTO users (email,password,pseudo,account_type) VALUES (?,?,?,?)"); 
           $addUser->execute(array($email,$hachachePWD,$pseudo,"NORMIE")); 
           echo '<div class="middleText" >Vous êtes inscrit !</div>';
           $recherche->closeCursor();
@@ -67,9 +67,17 @@ function signin(){
   //   session_start();
   //   session_destroy();
   //   header("Location: ../index.php");
+  // }
 
-  function getBadges(){
-    
+  function getBadges($idP){
+    $cursor = createCursor();
+    $table = $cursor->prepare('SELECT pseudo,badge_name, badge_color, badge_shape, badge_content FROM users_badges INNER JOIN users ON users.id = users_badges.user_id INNER JOIN table_badges ON table_badges.badge_id = users_badges.badge_id WHERE user_id=?' );
+    $table->execute([$idP]);
+    while($donnees = $table->fetch())
+    {     
+      echo '<div class=\'' . $donnees['badge_color'] . ' ' . $donnees['badge_shape'] . '\'>' . $donnees['badge_content'] . '</div>';
+    }
+    $table->closeCursor();
   }
 
   function getAllbadges(){
@@ -81,6 +89,7 @@ function signin(){
         echo '<div class=\'badgeDesc\'>' . $donnee['badge_name'] . ': ' . $donnee['badge_desc'] .'</div></div>';
     }
     $recherche->closeCursor();
+
 
   }
 
@@ -97,14 +106,68 @@ function signin(){
     $recherche = $cursor->query("SELECT * FROM users");
     while($donnee = $recherche->fetch())
     {
-        echo "<li>",$donnee['pseudo'],"</li>";
+        echo '<li>',$donnee['pseudo'],'</li>';
+    }
+    $recherche->closeCursor();
+    }
+    
+    function getAllUsers2(){
+      $cursor = createCursor();
+      $recherche = $cursor->query("SELECT * FROM users");
+      while($donnee = $recherche->fetch())
+      {
+        $idP = $donnee['id'];
+          echo '
+          <div class="container displayedUser">
+          <div class="usersBadgeButtons">
+          <form method="post">
+            <select name="badges">'
+              ,giveBadgeNameOptionList(),
+            '</select>
+                  <a href="" target="_blank"><input  type="submit" value="Give Badge" class="giveBadge"></a>
+                  <a href="" target="_blank"><input  type="submit" value="Remove Badge" class="removeBadge"></a> 
+          </form>    
+          </div>
+          <div class="flexBoxModal">       
+          <p>',getBadges($idP),'</p>
+          </div>
+          <div class="picAndUsername">
+          <p>[PICTURE]</p>
+          <p>',$donnee['pseudo'],'</p>
+          </div>
+          </div>';
+      }
+      $recherche->closeCursor();
+
+      }
+    // function addBadges(){
+    //   if(!empty(isset($_POST['badges'])){
+
+    //   }      
+    // }      
+
+  function displayAllUsers(){
+    $cursor = createCursor();
+    $recherche = $cursor->query("SELECT * FROM users WHERE account_type = 'NORMIE'");
+    while($data = $recherche->fetch())
+    {
+        echo '<div class="container displayedUser">
+                <div class="usersBadgeButtons">
+                    <a href="" target="_blank"><input type="button" value="Give Badge" class="giveBadge"></a>
+                    <a href="" target="_blank"><input type="button" value="Remove Badge" class="removeBadge"></a>
+                </div>
+                <div class="picAndUsername">
+                    <p>[PICTURE]</p>
+                    <p>' . $data['pseudo'] . '</p>
+                </div>
+            </div>';
     }
     $recherche->closeCursor();
     }
 
 
-
-  function getAllUsersBadges(){
+  
+    function getAllUsersBadges(){
     $cursor = createCursor();
     $table = $cursor->query('SELECT pseudo,badge_name FROM users_badges INNER JOIN users ON users.id = users_badges.user_id INNER JOIN
     table_badges ON table_badges.badge_id = users_badges.badge_id;' );
@@ -173,5 +236,14 @@ function signin(){
   function removeBadgeFromUser($badge_id, $user_id){
     
   }
+  function giveBadgeNameOptionList(){
 
+  $cursor = createCursor();
+        $recherche = $cursor->query("SELECT * FROM table_badges ");
+        while($donnee = $recherche->fetch())
+        {
+            echo '<option value="',$donnee['badge_name'],'">',$donnee['badge_name'],'</option>';
+        }
+        $recherche->closeCursor();
+  }
 ?>

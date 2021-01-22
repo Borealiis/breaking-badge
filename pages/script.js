@@ -3,7 +3,6 @@ const users = document.getElementById('nbuser');
 const username = document.getElementById('pseudo');
 const poucrentage = document.getElementById('pourcentage') //le textcontent de pourcentage doit etre entrée à la ligne 37 à la place de 50
 
-
 for (i = 0; i < users.textContent; i++) {
     let userCard = document.createElement('div');
     userCard.className = 'usercard';
@@ -38,18 +37,15 @@ for (i = 0; i < users.textContent; i++) {
         progressionDone.textContent = poucrentage.textContent +="%completed";
         progress.appendChild(progressionDone);
     
-    
 }
 
-
 const userLIist = document.querySelector('.userslist');
+
 const progress = document.querySelector('.progress-done');
 
-//for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; i++){
 setTimeout(() => {
     progress.style.width = progress.getAttribute('data-done') + '%';
     progress.style.opacity = 1;
 }, 500)
-//};
-
-
+};
