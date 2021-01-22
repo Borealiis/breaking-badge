@@ -64,7 +64,7 @@
                 <div class="titreBox flexBoxAfficheUser">Last users <button id="boutonAfficheAllUsers">All Users</button></div>
                 <div class="boxInsideAfficheUser">
                     <div class="flexEndAddBadges">
-                        <div><?php include('pages\addBadges.php') ?></div>
+                        <div><?php include('pages/addBadges.php') ?></div>
                     </div>
                     
                     <ul>
@@ -75,7 +75,7 @@
                     </ul>
                 </div>   
                 <div class="viewBadges">
-                    </div><div id="allUserModal"><?php include('pages\all_users.php') ?></div>
+                    </div><div id="allUserModal"><?php include('pages/all_users.php') ?></div>
                     <a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a>
                     <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a>
                     
