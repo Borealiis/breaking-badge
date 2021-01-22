@@ -20,6 +20,7 @@ a{
 }
 p{
     font-family: 'Chakra Petch', sans-serif;
+    padding: 5px;
 }
 
 div{
@@ -374,10 +375,12 @@ main {
 }
 .description{
     align-self: flex-end;
-    color: rgb(29, 86, 124);
-    font-weight: 600;
-    font-style: normal;
-    text-shadow: 1px 1px #7d8199;
+    color: black;
+    background-color: rgba(225, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    padding: 8px;
+    /*font-weight: 600;*/
+    /*text-shadow: 1px 1px #7d8199;*/
 }
 .container.Users{
     margin-top: 50px;
@@ -641,14 +644,14 @@ main {
     border-radius: 0 0 15px 0;
 }
 .boxAfficheUser{
-    border: aqua solid 1px;
+    /*border: aqua solid 1px;*/
     border-radius: 5px;  
     width: 100%;
     /* margin: 5px; */
     height: fit-content;
 }
 .boxAfficheImage{
-    border: aqua solid 1px;
+    /*border: aqua solid 1px;*/
     border-radius: 5px;  
     width: fit-content;
     margin: 5px;
@@ -660,7 +663,7 @@ main {
     backdrop-filter: blur(8px);
 }
 .titreBox{
-    padding: 5px;
+    padding: 10px;
     background-color: rgb(183, 255, 255, 0.5);
     backdrop-filter: blur(2px);
 }

@@ -52,7 +52,8 @@
     
             </div>
             <div class="columnHeaderBoxAdmin boxAfficheUser marginTop">
-                <p class="description titreBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                    culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</div>
             </div>
         </section>
 
