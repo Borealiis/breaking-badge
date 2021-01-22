@@ -184,10 +184,10 @@ function signin(){
     {   
         if($results['user_id']== $id ){
             $number++;
-            echo $number;
+          }
+          
         }
-            
-    }
+        echo $number;
     
   }
   function amountOfUsers(){
