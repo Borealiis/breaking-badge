@@ -607,7 +607,10 @@ td{
     display: flex;
     justify-content: space-between;
 }
-
+.flexEndAddBadges{
+    display: flex;
+    justify-content: flex-end;
+}
 /* ___________NavBar_____________________ */
 .flexNav{
     display: flex;
@@ -764,7 +767,8 @@ td{
     overflow: auto;
 }
 .flexBoxModal{
-    display: flex;  
+    display: flex;
+    flex-wrap: wrap;  
 }
 .centerButModal{
     display: flex;
