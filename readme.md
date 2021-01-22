@@ -77,14 +77,14 @@ Please make sure to update tests as appropriate.
 # Web page overview
                                                    (Loading page)
                                 
-![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/loading_page.png)
+![image](./assets/image/loading_page.png)
 
                                                     (User page)
                                 
-![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/user_page.png)
+![image](./assets/image/user_page.png)
                                                   (Admin page)
                                 
-![image](https://github.com/AuroreVanHoorebeke/breaking-badge/tree/master/assets/image/admin_page.png)
+![image](./assets/image/admin_page.png)
 
 
 
