@@ -10,6 +10,15 @@
 </head>
 <body>
     <main class="allBadges">
+    <?php
+        include_once('../components/functions.php');
+        if(isset($_POST['badge_tag']) && isset($_POST['badge_color']) && isset($_POST['badge_name']) && isset($_POST['badge_desc']) && isset($_POST['badge_content'])){
+            createBadge();
+        }
+        else{
+            echo '<p>Not working!</p>';
+        }
+    ?>  
         <div class="container h2Badges"><h2>New badge creation</h2></div>
         <section class="container displayedBadges">
                 <form action="" method="post" class="displayedCreation">
