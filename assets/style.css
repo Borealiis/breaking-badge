@@ -340,7 +340,6 @@ main {
     text-decoration: none;
     color: aqua;
     font-size: 20px;
-    font-weight: bold;
     text-shadow: 1.5px 1.5px rgb(205,110,198);
     margin-left: 5px;
     margin-right: 5px;
@@ -579,6 +578,10 @@ main {
     justify-content: center;
 }
 
+.profileName, .profileEmail {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
 .divContainerDashboard {
     display: flex;
     /* flex-wrap: wrap; */
@@ -651,6 +654,7 @@ main {
     margin: 5px;
     background-image: url(image/admin.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 .blur{
     backdrop-filter: blur(8px);
