@@ -5,7 +5,7 @@
 * [Setup](#setup)
 * [Improvements](#Improvements)
 * [Contributing](#Contruting)
-* [License](#License)
+
 
 # Team
 
@@ -31,7 +31,7 @@ AS a part of our becode training, We have been asked to create a plateform with 
 
 
 
-# Technologies used:
+# Technologies:
 
 * HTML
 * JS
