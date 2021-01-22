@@ -128,7 +128,11 @@ function signin(){
           </div>
           <div class="picAndUsername">
           <p>[PICTURE]</p>
-          <p>',$donnee['pseudo'],'</p>
+            <div class="centerButModal container2 ">
+              <p class="centerButModal >',$donnee['pseudo'],'</p>
+              <p class="centerButModal >',$donnee['email'],'</p>
+          </div>
+          
           </div>
           </div>';
           
@@ -235,7 +239,34 @@ function signin(){
     
   }
   function createBadge(){
-
+    try
+    {
+      $cursor = createCursor();
+      $createBadge = $cursor->prepare("INSERT INTO table_badges (badge_id, badge_name, badge_desc, badge_color, badge_shape, badge_tag, badge_content) 
+      VALUES (?,?,?,?,?,?,?)"); 
+      $badge_id = NULL;
+      $badge_name = $_POST['badge_name'];
+      $badge_desc = $_POST['badge_desc'];
+      $badge_color = $_POST['badge_color'];
+      $badge_tag = $_POST['badge_tag'];
+      if($badge_tag == 'success'){
+        $badge_shape = 'ring';
+      }
+      else if($badge_tag == 'collection'){
+        $badge_shape = 'elem';
+      }
+      else if($badge_tag == 'admin'){
+        $badge_shape = 'stars';
+      }
+      $badge_content = $_POST['badge_content'];
+  
+      $createBadge->execute(array($badge_id,$badge_name,$badge_desc,$badge_color,$badge_shape,$badge_tag,$badge_content));
+      $createBadge->closeCursor();
+    }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+    }
   }
 
   function editBadge($badge_id){
@@ -276,7 +307,7 @@ function signin(){
           $recherche->closeCursor();
     }
 function amountAllBadgesOfAllUSers(){     
-  for($i = 1; $i <= amountOfUsers2();$i++){
+  for($i = 2; $i <= amountOfUsers2();$i++){
       $cursor = createCursor();
       $query = $cursor->prepare(' SELECT COUNT(badge_id) as badges FROM users_badges WHERE user_id=? ');
       $query->execute([$i]);

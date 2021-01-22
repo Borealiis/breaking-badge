@@ -42,7 +42,7 @@
               
             </div>
 
-            <div class="columnHeaderBoxAdmin boxAfficheUser blur ">
+            <div class="columnHeaderBoxAdmin boxAfficheUser blur marginTop">
                 <div class="titreBox">Profile</div > 
                 <div class="alignTextAdminBox" >
                     <div><?php echo $_SESSION['pseudo']; ?></div>
@@ -51,7 +51,7 @@
 
     
             </div>
-            <div class="columnHeaderBoxAdmin boxAfficheUser">
+            <div class="columnHeaderBoxAdmin boxAfficheUser marginTop">
                 <p class="description titreBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis culpa possimus quod! Adipisci autem id inventore non perferendis quod repudiandae sint totam. Necessitatibus numquam obcaecati omnis ut voluptatum.</p>
             </div>
         </section>
@@ -61,18 +61,14 @@
                 <div class="boxAfficheUser">
          
                 <div class="titreBox flexBoxAfficheUser"><input type="button" class="seeAllBadges" value="All Users" id="boutonAfficheAllUsers"></input><div><?php include('pages/addBadges.php') ?></div> </div>
-                <div class="boxInsideAfficheUser">
+
+                <!-- <div class="boxInsideAfficheUser">
                     <div class="flexEndAddBadges">
                         
                     </div>
-                    
-                    <ul>
-                    <?php
-                        getAllUsers();
-                    ?>
-                    </li>   
-                    </ul>
-                </div>  
+                
+                </div>   -->
+
                 <div class="viewBadges">
                     </div><div id="allUserModal"><?php include('pages/all_users.php') ?></div>
                     
@@ -80,11 +76,14 @@
                     
                     <div class="recentBadges">
                         
-                        <p class="subtitle">Last badges</p>
+                        <!-- <p class="subtitle">Last badges</p> -->
                     </div>
-                    <div class="titreBox flexBoxAfficheUser"><div><a href="" target="_blank"><input type="button" value="All Badges" class="seeAllBadges"></a></div> <div>
+
+                    <div class="titreBox flexBoxAfficheUser"><div><input type="button" value="All Badges" class="seeAllBadges" id="seeAllBadges"></div> <div>
                     <!-- <a href="" target="_blank"><input type="button" value="+" class="addBadge"></a> -->
                 </div></div> 
+                <div class="boxAllBadges" id="boxAllBadges"><?php include('pages/all_badges.php') ?></div>
+
                 </div>
             </section>
             
@@ -110,5 +109,9 @@
     </div>
     </div>
 </main>
-<div id="allUserModal"><?php include('pages\all_users.php') ?></div>
+<!-- <div id="allUserModal">
+    <?php
+    //  include('pages\all_users.php') 
+     ?>
+</div> -->
 <script src="assets\anim.js"></script>

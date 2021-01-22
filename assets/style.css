@@ -32,12 +32,13 @@ input {
 }
 
 input[type="text"] {
+    background: whitesmoke;
     border-radius: 8px;
     padding: 0 7px 0 7px;
     outline: none;
 }
 
-input[type="button"], input[type="submit"] {
+input[type="button"], input[type="submit"], button, select {
     background: rgba(185, 239, 253, 0.7);
     border: rgba(114, 134, 134, 0.5) 3px;
     border-radius: 8px;
@@ -47,7 +48,7 @@ input[type="button"], input[type="submit"] {
     transition-duration: 0.2s;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
     /*background: rgb(237, 76, 192);*/
     background: rgba(72, 82, 144, 0.2);
     box-shadow: 2px 2px rgba(72, 82, 144, 0.5);
@@ -55,6 +56,17 @@ input[type="button"]:hover, input[type="submit"]:hover {
     backdrop-filter: blur(3px);
 }
 
+option {
+    background: rgb(211, 240, 248);
+}
+
+textarea {
+    backgound: whitesmoke;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 8px;
+    padding: 0 7px 0 7px;
+    outline: none;
+}
 /* ___________Scrollbar_____________ */
 
 ::-webkit-scrollbar{
@@ -261,6 +273,7 @@ main {
 }
 
 .dashboardinfo{
+    margin-top: 200px;
     height: 500px;
 }
 .container.sidebarnotif{
@@ -534,6 +547,10 @@ main {
     display: none;
 }
 /* ___________adminDashboard_____________ */
+.marginTop{
+    margin-top: 5px;
+    margin-right: 5px;
+}
 .headerBoxAdmin{
     display: flex;
 }
@@ -569,6 +586,21 @@ main {
     padding: 15px;
     justify-content: space-between;
 }
+/* .container2 {
+    background-color: rgba(117, 190, 218, 0.3);
+    margin: 5px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 0px 20px 20px 0px;
+   
+} */
+/* .picT{
+    background-image: url(../assets/image/pic.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 83px;
+    margin-top: 5px;
+} */
 
 .badgesAndUsers {
     display: flex;
@@ -770,8 +802,6 @@ td{
 
 
 .divBadges{
-    height: 70vh;
-    overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -811,12 +841,15 @@ td{
 }
 .blurBack{
     backdrop-filter: blur(7px);
+    height: 100vh;
 }
 .brightnessDrop{
     backdrop-filter: brightness(1.5);
+    height: 100vh;
 }
 .hueRotate{
     backdrop-filter: hue-rotate(120deg);
+    height: 100vh;
 }
 /* ______________________modal All Users____________ */
 #allUserModal{
@@ -838,7 +871,15 @@ td{
     flex-direction: column;
     justify-content: center;
 }
-
+/* ______________________modal All Badges____________ */
+.boxAllBadges{
+    height: 0px;
+    width: 99%;
+    opacity: 0%;
+    backdrop-filter: blur(20px);
+    transition-duration: 1s;
+    overflow: auto;
+}
 
 /* ------------ START FUTURE BADGE OPTIONS ------------ */
 
