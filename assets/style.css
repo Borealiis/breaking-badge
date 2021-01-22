@@ -15,6 +15,10 @@ body{
 a{
     text-decoration: none;
     color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px rgb(205,110,198);
+    text-align: center;
 }
 
 /* ___________Inputs_______________ */
@@ -263,13 +267,59 @@ main {
 .badgeNotifuser{
     font-weight: bold;
 }
+.bell{
+    margin-top: 90px;
+    font-style: oblique;
+    color: rgb(235, 227, 236);
+    font-size: 19.5px;
+    font-weight: bold;
+    text-shadow: 3px 3px #7d8199;
+}
+.imagebell{
+    background: linear-gradient(to left, rgba(105, 163, 163, 0.438),rgba(94, 120, 175, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    padding-top: 10px;
+    max-height: 70px;
+    border-bottom: 1px solid rgba(117, 190, 218, 0.3);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
+}
+.notifmsg{
+    margin-top: 0px;
+}
+.messagenotif{
+    color: rgb(29, 86, 124);
+    font-size: larger;
+    text-shadow: 1px 1px #7d8199   
+}
+.messagebox{
+    min-height: 440px;
+    background: linear-gradient(to left, rgba(188, 194, 194, 0.438),rgba(189, 186, 194, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    padding-top: 10px;
+    max-height: 70px;
+    border-bottom: 1px solid rgba(117, 190, 218, 0.3);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
+}
+.messagebox:hover{
+    background: linear-gradient(to left, rgba(207, 214, 214, 0.74),rgba(189, 186, 194, 0.787));
+    color: whitesmoke;
+}
 .welcome{
-    background-image: linear-gradient(120deg, rgba(204, 210, 221, 0.644),rgba(105, 211, 110, 0.329));
-    border: 1px solid rgba(96, 212, 50, 0.452);
-    box-shadow: 0px 1px 1px 0px;
-    border-radius: 10px;
-    
+    border: 1.5px solid rgb(181,173,199);
+    background: linear-gradient(rgba(35, 44, 48, 0.746),rgba(1, 42, 58,0.5));
+    box-shadow: 3px 1px 7px 7px rgba(128, 114, 134, 0.322);
     margin-top: 20px;
+    text-decoration: none;
+    color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px rgb(205,110,198);
     margin-left: 5px;
     margin-right: 5px;
     padding: 10px;
@@ -277,8 +327,10 @@ main {
 
 .container.userinfo{
     margin-top: 20px;
+    margin-left: 30px;
     width: 800px;
     height: 170px;
+    align-items: center;
     background-color:  rgba(193, 200, 202, 0.781);
     border: 1px solid rgba(117, 136, 218, 0.3);
     border-top-right-radius: 15px;
@@ -292,11 +344,19 @@ main {
     margin: auto;
     font-size: larger;
     font-weight: bold;
+    font-size: xx-large;
+    text-shadow: 1px 2px #7d8199;
+}
+.userimage{
+    width:20px;
+     height:20px;
 }
 .description{
-    padding: 10px;
-    font-style: italic; 
-    align-self: center;
+    align-self: flex-end;
+    color: rgb(29, 86, 124);
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 1px 1px #7d8199;
 }
 .container.Users{
     margin-top: 50px;
@@ -310,11 +370,33 @@ main {
 }
 .userdash{
     display: flex;
+    background: linear-gradient(to left, rgba(114, 134, 134, 0.438),rgba(126, 116, 143, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    align-items: center;
     justify-content: center;
+    font: caption;
+    font-style: oblique;
+    color: rgb(235, 227, 236);
+    border-bottom: 1px solid rgba(117, 190, 218, 0.3);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
 }
 .ranking{
     display: flex;
+    background: linear-gradient(to left, rgba(114, 134, 134, 0.438),rgba(126, 116, 143, 0.719));
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    align-items: center;
     justify-content: center;
+    font: caption;
+    font-style: oblique;
+    color: rgb(235, 227, 236);
+    border-bottom: 1px solid rgba(117, 190, 218, 0.3);
+    border-radius: 10px 10px 15px 15px;
+    box-shadow: 6px 6px rgba(114, 134, 134, 0.322);
 }
 .Userslist{
     height: 400px;
@@ -352,14 +434,21 @@ main {
     margin-left: 5px;
     margin-right: 5px;
 }
+.usercard:hover{
+    background: linear-gradient(to left, rgba(203, 226, 235, 0.938),rgba(181, 204, 212, 0.938));
+}
+
 .name{
+    color: rgb(29, 86, 124);
     align-self: center;
     font-weight: bold;
     font-size: larger;
+    text-shadow: 1px 1px #7d8199;
 }
-.progession{
+.progression{
     margin: auto;
-    font-style: italic;
+    color: rgb(29, 86, 124);
+    text-shadow: 1px 1px #7d8199
 }
 .progress{
     background-color: #d8d8d8;
@@ -382,7 +471,15 @@ main {
     width: 0;
     transition: 1s ease;
 }
-
+#nbuser{
+    display: none;
+}
+#pseudo{
+    display: none;
+}
+#pourcentage{
+    display: none;
+}
 /* ___________adminDashboard_____________ */
 .headerBoxAdmin{
     display: flex;
