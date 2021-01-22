@@ -32,7 +32,7 @@ include('../components/navbar.php');
               <form action="" method="post">
               <div><input class="sizeInput"type="text" placeholder="Pseudo" name="pseudo"></div>
               <div><input class="sizeInput"type="text" placeholder="Email" name="email"></div>
-              <div><input class="sizeInput"type="text" placeholder="Password" name="pwd"></div>
+              <div><input class="sizeInput"type="password" placeholder="Password" name="pwd"></div>
 
               <div><input class="sizeInput"type="submit" value="sign in"></div>
           </form>
