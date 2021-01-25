@@ -6,11 +6,10 @@
 * [Team](#Team)
 * [Introduction](#Introduction)
 * [Technologies](#Technologies)
-* [Setup](#setup)
+* [Setup](#Setup)
 * [Improvements](#Improvements)
 * [Contributing](#Contruting)
-* [Web page overview](#preview)
-Web page overview
+* [Web page overview](#Web)
 
 
 # Team
@@ -27,7 +26,7 @@ Our team members are:
 
 AS a part of our becode training, We have been asked to create a plateform with a relational database. 
 
-#Here are the main instructions given:
+### Here are the main instructions given:
 
 >* Create a fullstack application
 >* Create a relational database, with many-to-many relationships
@@ -53,7 +52,7 @@ AS a part of our becode training, We have been asked to create a plateform with 
 # Setup
 
 ### Github
-Github was the main tool used in order to gather all of our works combined. You can find it the following repo [here](https://github.com/AuroreVanHoorebeke/breaking-badge).
+Github was the main tool used in order to gather all of our works and combine them. You can find it the following repo [here](https://github.com/AuroreVanHoorebeke/breaking-badge).
 ```git
 git init
 git clone (url)
